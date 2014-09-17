@@ -9,7 +9,7 @@ Version
 What is this?
 ---------------------
 * This is the full Qazap package which you see after installation under Joomla CMS directory structure.
-* This is **not** an installable package. Get [Qazap installable package](http://www.qazap.com/download)
+* This is **not** an installable package. Get [Qazap installable package](http://www.qazap.com/download-qazap)
 * Qazap [Official site](http://www.qazap.com)
 * Detailed changes in the [Changelog](https://github.com/qazap/qazap/commits/master)
 
@@ -22,13 +22,13 @@ More [details here](http://www.qazap.com/about-qazap)
 
 Ready to install Qazap?
 ---------------------
-* See [minimum requirements](http://www.qazap.com/docs/introduction/system-requirements)
-* How do you [install Qazap](http://www.qazap.com/docs/installation-and-updates/installing-qazap)?
+* See [minimum requirements](http://www.qazap.com/documentations/introduction/system-requirements)
+* How do you [install Qazap](http://www.qazap.com/documentations/installation-and-updates/installing-qazap)?
 
 Do you want to improve Qazap?
 ---------------------
 * Get Involved: Qazap is a community developed software. [Join the community](http://www.qazap.com)
-* [Documentation](http://www.qazap.com/docs)
+* [Documentation](http://www.qazap.com/documentations)
 
 Copyright:
 ---------------------
