@@ -19,7 +19,7 @@ What is Qazap?
 * This is a simple and powerful web server application and it requires Joomla 3.3 (and above) to run it. 
 More [details here](http://www.qazap.com/about-qazap)
 
-Ready to install Joomla?
+Ready to install Qazap?
 ---------------------
 * See [minimum requirements](http://www.qazap.com/docs/introduction/system-requirements)
 * How do you [install Qazap](http://www.qazap.com/docs/installation-and-updates/installing-qazap)?
