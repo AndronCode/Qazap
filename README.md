@@ -1,6 +1,6 @@
 Qazap [![Analytics](https://ga-beacon.appspot.com/UA-54904102-2/qazap/readme)](https://github.com/igrigorik/ga-beacon)
 =============
-Qazap is an free open source eCommerce extension which enables you to build professional online stores under Joomla! content management system (CMS).
+Qazap is a free and open source eCommerce extension for Joomla! content management system (CMS), which enables you to build powerful and modern online stores.
 
 Version
 ---------------------
