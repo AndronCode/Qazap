@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+			<field 
+				name="payment_id" 
+				type="text" 
+				size="40" 
+				class="inputbox" 
+				readonly="readonly"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_PAYMENT_ID"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_PAYMENT_ID" 
+				filter="safehtml" /> 
+
+			<field 
+				name="created_by" 
+				type="user" 
+				default="" 
+				label="JGLOBAL_CREATED_BY_LABEL"
+				description="JGLOBAL_CREATED_BY_DESC"  />
+			
+			<field
+				name="created_time"
+				type="text"
+				label="JGLOBAL_CREATED_DATE"
+				class="readonly"
+				filter="unset"
+				readonly="true" />
+
+			<field
+				name="modified_time"
+				type="text"
+				label="JGLOBAL_FIELD_MODIFIED_LABEL"
+				class="readonly"
+				filter="unset"
+				readonly="true" />
+
+			<field
+				name="modified_by"
+				type="user"
+				label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+				class="readonly"
+				readonly="true"
+				filter="unset"/>
+			
+			<field
+				name="checked_out"
+				type="hidden"
+				filter="unset"/>
+
+			<field
+				name="checked_out_time"
+				type="hidden"
+				filter="unset"/> 
+
+			<field 
+				name="vendor" 
+				type="qazapvendor"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_VENDOR"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_VENDOR"
+				paymentform="true" />
+
+			<field 
+				name="date" 
+				type="calendar" 
+				class="inputbox" 
+				default="NOW"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_DATE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_DATE" 
+				format="%Y-%m-%d %H:%M:%S"
+				filter="user_utc" /> 
+
+			<field 
+				name="total_order_value" 
+				type="text" 
+				required="true"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_TOTAL_ORDER_VALUE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_TOTAL_ORDER_VALUE"
+				filter="float" 
+				readonly="true" />
+
+			<field 
+				name="total_confirmed_order" 
+				type="text" 
+				required="true"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_TOTAL_CONFIRMED_ORDER"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_TOTAL_CONFIRMED_ORDER"
+				filter="float" 
+				readonly="true" /> 
+
+			<field 
+				name="total_commission_value" 
+				type="text" 
+				required="true"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_TOTAL_COMMISSION_VALUE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_TOTAL_COMMISSION_VALUE"
+				filter="float"
+				readonly="true" />
+
+			<field 
+				name="total_confirmed_commission" 
+				type="text" 
+				required="true"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_TOTAL_CONFIRMED_COMMISSION"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_TOTAL_CONFIRMED_COMMISSION"
+				filter="float" 
+				readonly="true" />
+
+			<field 
+				name="last_payment_amount" 
+				type="text"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_LAST_PAYMENT_AMOUNT"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_LAST_PAYMENT_AMOUNT" 
+				menu_published="0"
+				readonly="true"
+				filter="float" /> 
+
+			<field 
+				name="last_payment_date" 
+				type="calendar" 
+				class="inputbox"
+				default="0000-00-00 00:00:00" 
+				label="COM_QAZAP_FORM_LBL_PAYMENT_LAST_PAYMENT_DATE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_LAST_PAYMENT_DATE" 
+				format="%Y-%m-%d %H:%M:%S"
+				readonly="readonly"
+				filter="user_utc" /> 
+
+			<field 
+				name="total_paid_amount" 
+				type="text"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_TOTAL_PAID_AMOUNT"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_TOTAL_PAID_AMOUNT"
+				filter="float"
+				readonly="true" /> 
+
+			<field 
+				name="total_balance" 
+				type="text" 
+				required="true"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_TOTAL_BALANCE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_TOTAL_BALANCE"
+				filter="float" 
+				readonly="true" /> 
+
+			<field 
+				name="currency" 
+				type="qazapcurrency"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_CURRENCY"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_CURRENCY" />
+
+
+			<field 
+				name="payment_amount" 
+				type="text"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_PAYMENT_AMOUNT"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_PAYMENT_AMOUNT" 
+				required="true"  /> 
+
+			<field 
+				name="balance" 
+				type="text"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_BALANCE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_BALANCE" 
+				readonly="true" /> 
+
+			<field 
+				name="payment_method" 
+				type="Qazapvendorpayments"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_PAYMENT_METHOD"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_PAYMENT_METHOD"/>	 
+
+			<field 
+				name="send_mail" 
+				type="checkbox" 
+				default="1"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_MAIL_SENT"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_MAIL_SENT"/>
+
+			<field 
+				name="note" 
+				type="textarea"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_NOTE"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_NOTE" 
+				cols="100"
+				rows="8" />		
+
+			<field 
+				name="payment_status" 
+				type="list" 
+				default="0"
+				class="chzn-color-state"
+				label="COM_QAZAP_FORM_LBL_PAYMENT_PAYMENT_STATUS"
+				description="COM_QAZAP_FORM_DESC_PAYMENT_PAYMENT_STATUS">
+				<option value="0">COM_QAZAP_PAYMENT_UNPAID</option>
+				<option value="1">COM_QAZAP_PAYMENT_PAID</option>
+				<option value="2">COM_QAZAP_PAYMENT_AUTOPAID</option>
+			</field> 
+
+			<field
+				name="state"
+				type="radio" 
+				class="btn-group btn-group-yesno"  
+				label="COM_QAZAP_PAYMENT_PROCESS_LBL"
+				description="COM_QAZAP_PAYMENT_PROCESS_DESC"
+				default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+	
+	<field 
+		type="hidden"
+		name="params" />
+
+	</fieldset>
+
+</form>

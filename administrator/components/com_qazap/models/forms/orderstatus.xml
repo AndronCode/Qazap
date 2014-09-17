@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field 
+			name="id" 
+			type="text" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_ORDERSTATUS_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/> 
+
+		<field 
+			name="created_by" 
+			type="createdby" 
+			default="" 
+			label="COM_QAZAP_FORM_LBL_ORDERSTATUS_CREATED_BY"
+			description="COM_QAZAP_FORM_DESC_ORDERSTATUS_CREATED_BY"/> 
+
+		<field 
+			name="status_code" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_ORDERSTATUS_STATUS_CODE"
+			description="COM_QAZAP_FORM_DESC_ORDERSTATUS_STATUS_CODE"
+			required="true"/> 
+
+		<field 
+			name="status_name" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_ORDERSTATUS_STATUS_NAME"
+			description="COM_QAZAP_FORM_DESC_ORDERSTATUS_STATUS_NAME"
+			class="input-xxlarge input-large-text"
+			required="true"/> 
+
+		<field 
+			name="stock_handle" 
+			type="list" 
+			default="0" 
+			class="chzn-color-state"         
+			label="COM_QAZAP_FORM_LBL_ORDERSTATUS_STOCK_HANDLE"
+			description="COM_QAZAP_FORM_DESC_ORDERSTATUS_STOCK_HANDLE" >
+			<option value="2">COM_QAZAP_ORDERSTATUS_NONE_STOCK</option>
+			<option value="1">COM_QAZAP_ORDERSTATUS_CONSUME_STOCK</option>
+			<option value="-1">COM_QAZAP_ORDERSTATUS_RETURN_STOCK</option>				 
+		</field> 
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+
+</form>

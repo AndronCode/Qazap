@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_CATEGORIES_ITEMS_SEARCH_FILTER"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="vendor"
+			type="vendorlist"
+			label="JOPTION_FILTER_LEVEL"
+			description="JOPTION_FILTER_LEVEL_DESC"
+			onchange="this.form.submit();">
+			<option value="">COM_QAZAP_FILTER_BY_VENDOR</option>
+		</field>
+			
+		<field
+			name="process"
+			default="1"
+			type="list"
+			label="COM_QAZAP_FILTER_PUBLISHED"
+			description="COM_CQAZAP_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="*">Select Process</option>
+			<option value="1">Processed</option>
+			<option value="-2">Trashed</option>
+			<option value="0">Pending</option>
+		</field>
+		<field
+			name="payment_status"
+			type="list"
+			label="COM_QAZAP_PAYMENT_STATUS_FILTER_"
+			description="COM_QAZAP_FILTER_PAYMENT_STATUS_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="*">Select Payment Status</option>
+			<option value="1">Paid</option>
+			<option value="0">UnPaid</option>
+		</field>
+		<field
+			name="mail_sent"
+			type="list"
+			label="COM_QAZAP_FILTER_MAIL_SENT"
+			description="COM_QAZAP_FILTER_MAIL_SENT_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="*">Select Mail Sent</option>
+			<option value="1">Sent</option>
+			<option value="0">Not Sent</option>
+		</field>		
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.payment_id ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.payment_id ASC">COM_QAZAP_PAYMENTID_ASCENDING</option>
+			<option value="a.payment_id DESC">COM_QAZAP_PAYMENTID_DESCENDING</option>			
+			<option value="b.shop_name ASC">COM_QAZAP_SHOPNAME_ASCENDING</option>
+			<option value="b.shop_name DESC">COM_QAZAP_SHOPNAME_DESCENDING</option>
+			<option value="a.payment_amount ASC">COM_QAZAP_PAYMENTAMOUNT_ASCENDING</option>
+			<option value="a.payment_amount DESC">COM_QAZAP_PAYMENTAMOUNT_DESCENDING</option>
+			<option value="a.date ASC">COM_QAZAP_PAYMENTDATE_DESCENDING</option>
+			<option value="a.date DESC">COM_QAZAP_PAYMENTDATE_DESCENDING</option>
+			<option value="a.payment_status ASC">COM_QAZAP_PAYMENTS_PAYMENT_STATUS_ASCENDING</option>
+			<option value="a.payment_status DESC">COM_QAZAP_PAYMENTS_PAYMENT_STATUS_DESCENDING</option>	
+			<option value="a.mail_sent ASC">COM_QAZAP_PAYMENTS_MAIL_SENT_ASCENDING</option>
+			<option value="a.mail_sent DESC">COM_QAZAP_PAYMENTS_MAIL_SENT_DESCENDING</option>
+			<option value="a.state ASC">COM_QAZAP_PAYMENTS_STATUS_ASCENDING</option>
+			<option value="a.state DESC">COM_QAZAP_PAYMENTS_STATUS_DESCENDING</option>		
+			
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CATEGORIES_LIST_LIMIT"
+			description="COM_CATEGORIES_LIST_LIMIT_DESC"
+			format="%Y-%m-%d %H:%M:%S"
+			onchange="this.form.submit();"
+		/>
+		<field
+			name="from_date"
+			type="calendar"
+			hint="COM_QAZAP_FILTER_PAYMENT_DATE_FROM_LBL"
+			label="COM_QAZAP_FILTER_PAYMENT_DATE_FROM_LBL"
+			description="COM_QAZAP_FILTER_PAYMENT_DATE_FROM_DESC"
+			onchange="this.form.submit();" />	
+			
+		<field
+			name="to_date"
+			type="calendar"
+			hint="COM_QAZAP_FILTER_PAYMENT_DATE_TO_LBL"
+			label="COM_QAZAP_FILTER_PAYMENT_DATE_TO_LBL"
+			description="COM_QAZAP_FILTER_PAYMENT_DATE_TO_DESC"
+			onchange="this.form.submit();"/>		
+	</fields>
+</form>

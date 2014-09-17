@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field
+		name="product_id" 
+		type="text"
+		readonly="true"
+		class="readonly" 
+		default="0" 
+		label="COM_QAZAP_FORM_LBL_PRODUCT_ID" 
+		description="JGLOBAL_FIELD_ID_DESC" /> 
+
+	<field 
+		name="product_sku" 
+		type="text" 
+		required="required"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_SKU"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_SKU"                
+		filter="raw" /> 
+		
+	<field
+		name="hits"
+		type="text"
+		default="0"
+		label="JGLOBAL_HITS"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_HITS"
+		class="readonly"
+		readonly="true"/>		
+				
+	<field 
+		name="parent_id" 
+		type="qazapproductparent"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PARENT_PRODUCT"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PARENT_PRODUCT" 
+		filter="raw" />
+
+	<field 
+		name="featured" 
+		type="radio" 
+		default="0" 
+		class="btn-group btn-group-yesno"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_FEATURED_PRODUCT"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_FEATURED_PRODUCT"
+		filter="raw" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				
+	</field>	
+
+	<field 
+		name="urls" 
+		type="url"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_URL"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_URL"                
+		filter="raw" /> 
+
+	<field 
+		name="tags" 
+		type="tag" 
+		label="JTAG" 
+		description="JTAG_DESC" 
+		class="inputbox span12" 
+		multiple="true" />
+
+	<field 
+		name="manufacturer_id" 
+		type="qazapmanufacturer" 
+		label="COM_QAZAP_FORM_LBL_PRODUCT_MANUFACTURER"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_MANUFACTURER" 
+		filter="integer" 
+		select="true" />
+
+	<field 
+		name="category_id" 
+		type="qazapcategories" 
+		required="required"               
+		label="COM_QAZAP_FORM_LBL_PRODUCT_CATEGORY"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_CATEGORY" />
+
+	<field 
+		name="access" 
+		type="accesslevel" 
+		required="required"                
+		label="JFIELD_ACCESS_LABEL"
+		description=""/>
+			
+	<field 
+		name="vendor" 
+		type="productvendor" 
+		required="required"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_VENDOR"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_VENDOR"
+		filter="raw" />
+				
+	<field 
+		name="multiple_pricing" 
+		type="list" 
+		default="0" 
+		class="chzn-color" 
+		onchange="return Qazap.multiple_pricing(this);"
+		label="COM_QAZAP_FORM_LBL_PRODUCT_MULTIPLE_PRICING"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_MULTIPLE_PRICING" filter="raw" >
+			<option value="0">JNO</option>
+			<option value="1">COM_QAZAP_FORM_LBL_PRODUCT_USERGROUP_PRICING</option>
+			<option value="2">COM_QAZAP_PRODUCT_QUANTITY_PRICING</option>
+	</field> 				
+
+	<field 
+		name="product_baseprice" 
+		type="text"             
+		label="COM_QAZAP_FORM_LBL_PRODUCT_BASEPRICE"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_BASEPRICE" 
+		filter="float" /> 
+
+	<field 
+		name="product_salesprice" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_FINALPRICE"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_FINALPRICE"
+		readonly="true"
+		class="readonly"
+		filter="float" />
+		
+	<field 
+		name="product_customprice" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_CUSTOMPRICE"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_CUSTOMPRICE"
+		class="input-product-custom-price" /> 		
+		
+	<field 
+		name="product_quantity_price" 
+		type="quantitypricing"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_QUANTITY_PRICE"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_QUANTITY_PRICE"
+		filter="raw" /> 		
+
+	<field 
+		name="dbt_rule_id" 
+		type="qazaprule" 
+		operation="2"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_DISCOUNT_BEFORE_TAX"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_DISCOUNT_BEFORE_TAX"
+		filter="raw" />
+
+	<field 
+		name="dat_rule_id" 
+		type="qazaprule" 
+		operation="1"              
+		label="COM_QAZAP_FORM_LBL_PRODUCT_DISCOUNT_AFTER_TAX"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_DISCOUNT_AFTER_TAX" 
+		filter="raw" />		
+
+	<field 
+		name="tax_rule_id" 
+		type="qazaprule" 
+		operation="3"               
+		label="COM_QAZAP_FORM_LBL_PRODUCT_TAX"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_TAX"                
+		filter="raw" />
+				
+	<field 
+		name="product_user_price" 
+		type="usergrouppricing"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_USERGROUP_PRICING"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_USERGROUP_PRICING"                
+		filter="raw" />				
+
+	<field 
+		name="in_stock" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_IN_STOCK"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_IN_STOCK" 
+		filter="integer" /> 
+					
+	<field 
+		name="ordered" 
+		type="text" 
+		disabled="disabled"            
+		label="COM_QAZAP_FORM_LBL_PRODUCT_ORDERED_PRODUCTS"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_ORDERED_PRODUCTS" 
+		filter="integer" /> 				
+				
+	<field 
+		name="booked_order" 
+		type="text" 
+		disabled="disabled"            
+		label="COM_QAZAP_FORM_LBL_PRODUCT_BOOKED_PRODUCTS"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_BOOKED_PRODUCTS" 
+		filter="integer" /> 				
+
+	<field 
+		name="product_length" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_LENGTH"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_LENGTH" 
+		filter="raw" /> 
+
+	<field 
+		name="product_length_uom" 
+		type="Length"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_LENGTH_U_O_M"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_LENGTH_U_O_M" 
+		filter="raw" />
+
+	<field 
+		name="product_width" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_WIDTH"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_WIDTH"
+		filter="raw" /> 
+
+	<field 
+		name="product_height" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_HEIGHT"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_HEIGHT" 
+		filter="raw" /> 
+
+	<field 
+		name="product_weight" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_WEIGHT"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_WEIGHT" 
+		filter="raw" /> 
+
+	<field 
+		name="product_weight_uom" 
+		type="Weight"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_WEIGHT_U_O_M"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_WEIGHT_U_O_M" 
+		filter="raw" />
+
+	<field 
+		name="product_packaging" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_PACKAGING"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_PACKAGING" 
+		filter="raw" />
+
+	<field 
+		name="membership" 
+		type="membership"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_MEMBERSHIP"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_MEMBERSHIP" 
+		multiple="true"
+		filter="raw"
+		class="input-xlarge" />
+		
+	<field 
+		name="product_packaging_uom" 
+		type="Packaging"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_PRODUCT_PACKAGING_U_O_M"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_PRODUCT_PACKAGING_U_O_M"
+		filter="raw" />
+
+	<field 
+		name="units_in_box" 
+		type="text"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_UNITS_IN_BOX"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_UNITS_IN_BOX" 
+		filter="raw" /> 
+
+	<field 
+		name="images" 
+		type="qazapmedia"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_IMAGES"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_IMAGES"
+		filter="raw" 
+		group="products" 
+		multiple="multiple" 
+		imagesonly="1" /> 
+
+	<field 
+		name="related_categories" 
+		type="qazaprelatedcategory"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_RELATED_CATEGORIES"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_RELATED_CATEGORIES" 
+		filter="raw"
+		multiple="true" />
+
+	<field 
+		name="related_products" 
+		type="qazaprelatedproduct"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_RELATED_PRODUCTS"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_RELATED_PRODUCTS"
+		filter="raw"
+		multiple="true" />
+
+	<field 
+		name="custom_field" 
+		type="customfields"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_CUSTOM_FIELD_TYPE"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_CUSTOM_FIELD_TYPE" 
+		filter="raw" />
+				
+	<field 
+		name="cartattributes" 
+		type="cartattributes"                
+		label="COM_QAZAP_FORM_LBL_PRODUCT_CARTATTRIBUTE"
+		description="COM_QAZAP_FORM_DESC_PRODUCT_CARTATTRIBUTE" 
+		filter="raw"
+		multiple="true" />	
+		
+	<field 
+		name="checked_out" 
+		type="hidden" 
+		filter="unset" />
+
+	<field 
+		name="checked_out_time" 
+		type="hidden" 
+		filter="unset" />
+		
+	<field 
+		name="created_by" 
+		type="user" 
+		label="JGLOBAL_FIELD_CREATED_BY_LABEL" 
+		description="JGLOBAL_FIELD_CREATED_BY_DESC" 
+		labelclass="control-label" />
+
+	<field
+		name="created_time"
+		type="text"
+		label="JGLOBAL_CREATED_DATE"
+		class="readonly"
+		filter="unset"
+		readonly="true" />
+		
+	<field 
+		name="modified_by" 
+		type="user" 
+		label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" 
+		description="JGLOBAL_FIELD_MODIFIED_BY_DESC" 
+		class="readonly" 
+		readonly="true" 
+		filter="unset" 
+		labelclass="control-label" />
+
+	<field
+		name="modified_time"
+		type="text"
+		label="JGLOBAL_FIELD_MODIFIED_LABEL"
+		class="readonly"
+		filter="unset"
+		readonly="true" />
+		
+	<field 
+		name="downloadable_file" 
+		type="filelist" 
+		label="COM_QAZAP_FORM_LBL_PRODUCT_DOWNLOADABLE_FILE" 
+		description="COM_QAZAP_FORM_DESC_PRODUCT_DOWNLOADABLE_FILE" 
+		hide_default="true"
+		directory="D:\xampp\downloadable_files\"
+		default="" />	
+		 
+	<field 
+		name="state" 
+		type="list" 
+		label="JSTATUS" 
+		description="JFIELD_PUBLISHED_DESC" 
+		class="chzn-color-state" 
+		size="1" 
+		default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+	</field>
+	
+	<field 
+		name="block" 
+		type="radio" 
+		default="0" 
+		class="btn-group btn-group-yesno btn-group-blockapprove" 
+		label="COM_QAZAP_FORM_LBL_PRODUCT_BLOCK" 
+		description="COM_QAZAP_FORM_DESC_PRODUCT_BLOCK"	
+		filter="integer">
+			<option value="1">COM_QAZAP_BLOCKED</option>
+			<option value="0">COM_QAZAP_APPROVED</option>
+	</field>
+			
+		<!--The following fields will be modified further in the model. This fields are included in the form for correct SimpleXMLElement literal -->
+		<field name="product_name" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_PRODUCT_NAME" />
+		<field name="product_alias" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_PRODUCT_ALIAS" />
+		<field name="short_description" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_SHORT_DESCRIPTION" />
+		<field name="product_description" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_PRODUCT_DESCRIPTION" />
+		<field name="page_title" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_PAGE_TITLE" /> 
+		<field name="metakey" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_METAKEY" />
+		<field name="metadesc" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_METADESC" />
+		<field name="robots" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_ROBOTS" />
+		<field name="author" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_AUTHOR" />
+		<field name="rights" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_RIGHTS" />
+		<field name="xreference" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_XREFERENCE" />
+		<field name="language" label="COM_QAZAP_PRODUCT_DETAILS_FIELD_LANGUAGE" />
+		
+		<fields name="params">
+			<fieldset name="basic"
+				label="COM_QAZAP_FIELDSET_PARAMS_BASIC">
+				
+				<field
+					name="product_layout" 
+					type="componentlayout"
+					label="JGLOBAL_FIELD_LAYOUT_LABEL"
+					description="JGLOBAL_FIELD_LAYOUT_DESC"
+					menuitems="true"
+					useglobal="true"
+					extension="com_qazap"
+					view="product" />
+					
+				<field 
+					name="show_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_SHOW_ICON"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+									
+				<field 
+					name="print_view_link" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_PRINT_VIEW_LINK"
+					description="COM_QAZAP_CONFIG_DESC_PRINT_VIEW_LINK" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field 
+					name="pdf_view_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_PDF_VIEW_ICON"
+					description="COM_QAZAP_CONFIG_DESC_PDF_VIEW_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="email_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_EMAIL_ICON"
+					description="COM_QAZAP_CONFIG_DESC_EMAIL_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_availablity" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="availability_day_info" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY_DAY_INFO"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY_DAY_INFO" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="in_stock_image" 
+					type="media"
+					directory="qazap"
+					default=""    
+					label="COM_QAZAP_LBL_IN_STOCK_IMAGE"
+					description="COM_QAZAP_DESC_IN_STOCK_IMAGE" >
+				</field>
+				
+				<field 
+					name="out_of_stock_image" 
+					type="media"
+					directory="qazap"
+					default=""    
+					label="COM_QAZAP_LBL_OUT_OF_STOCK_IMAGE"
+					description="COM_QAZAP_DESC_OUT_OF_STOCK_IMAGE" >
+				</field>
+				
+				<field 
+					name="ask_seller" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_ASK_SELLER"
+					description="COM_QAZAP_CONFIG_DESC_ASK_SELLER" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_stock" 
+					type="list"
+					class="btn-group btn-group-yesno"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_STOCK"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_STOCK" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>				
+				
+				<field 
+					name="show_manufacturer" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_MANUFACTURER"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_MANUFACTURER" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_seller" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_SELLER"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_SELLER" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_category_product" 
+					type="list"   
+					label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_rating" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_RATING"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_RATING" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_link_category_product" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY_LINK"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY_LINK" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+												
+				<field
+					name="spacer3"
+					type="spacer"
+					hr="true"/>	
+					
+				<field 
+					name="low_stock_notification" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_LOW_STOCK_NOTIFICATION"
+					description="COM_QAZAP_CONFIG_DESC_LOW_STOCK_NOTIFICATION" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>			
+
+				<field 
+					name="minimum_purchase_quantity" 
+					type="text" 
+					default=""
+					hint="JGLOBAL_USE_GLOBAL"
+					label="COM_QAZAP_CONFIG_LBL_DEFAULT_MINIMUM_PURCHASE_QUANTITY"
+					description="COM_QAZAP_CONFIG_DESC_DEFAULT_MINIMUM_PURCHASE_QUANTITY" 
+					filter="interger" />
+					
+				<field 
+					name="maximum_purchase_quantity" 
+					type="text" 
+					default=""
+					hint="JGLOBAL_USE_GLOBAL"
+					label="COM_QAZAP_CONFIG_LBL_DEFAULT_MAXIMUM_PURCHASE_QUANTITY"
+					description="COM_QAZAP_CONFIG_DESC_DEFAULT_MAXIMUM_PURCHASE_QUANTITY" 
+					filter="interger" />
+					   
+				<field 
+					name="purchase_quantity_steps" 
+					type="text" 
+					default=""
+					hint="JGLOBAL_USE_GLOBAL"
+					label="COM_QAZAP_CONFIG_LBL_DEFAULT_PURCHASE_QUANTITY_STEPS"
+					description="COM_QAZAP_CONFIG_DESC_DEFAULT_PURCHASE_QUANTITY_STEPS" 
+					filter="interger" />
+					
+				<field
+					name="stockout_action"
+					type="list"
+					label="COM_QAZAP_CONFIG_STOCKOUT_ACTION_LABEL"
+					description="COM_QAZAP_CONFIG_STOCKOUT_ACTION_DESC"
+					default="" >
+						<option value="">JGLOBAL_USE_GLOBAL</option>
+						<option value="notify">COM_QAZAP_SHOW_NOTIFY_BUTTON</option>
+						<option value="hide">COM_QAZAP_HIDE_ADDTOCART_BUTTON</option>
+						<option value="hide_product">COM_QAZAP_HIDE_PRODUCT</option>
+						<option value="display">COM_QAZAP_DISPLAY_ADDTOCART_BUTTON</option>				
+				</field>		
+						
+				<field
+					name="contact_for_price"
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_CONTACT_FOR_PRICE_LABEL"
+					description="COM_QAZAP_CONFIG_CONTACT_FOR_PRICE_DESC" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+			<fieldset name="publishing">
+				<field
+					name="available_from"
+					type="calendar"
+					label="COM_QAZAP_FORM_LBL_PRODUCT_AVAILABLE_FROM"
+					description="COM_QAZAP_FORM_DESC_PRODUCT_AVAILABLE_FROM"
+					default="" 
+					hint="COM_QAZAP_FORM_LBL_PRODUCT_START_DATE"
+					format="%Y-%m-%d %H:%M" 
+					filter="user_utc" 
+					autocomplete="on" />
+					
+				<field
+					name="available_end"
+					type="calendar"
+					label="COM_QAZAP_FORM_LBL_PRODUCT_AVAILABLE_END"
+					description="COM_QAZAP_FORM_DESC_PRODUCT_AVAILABLE_END"
+					default="" 
+					hint="COM_QAZAP_FORM_LBL_PRODUCT_END_DATE"
+					format="%Y-%m-%d %H:%M" 
+					filter="user_utc" 
+					autocomplete="on" />									
+			</fieldset>
+		</fields>				
+</form>

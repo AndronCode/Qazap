@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QAZAP_BRANDS_VIEW_DEFAULT_TITLE" option="COM_QAZAP_BRANDS_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_QAZAP_CATEGORIES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset 
+			name="request"
+			addfieldpath="/administrator/components/com_qazap/models/fields">			
+			<field 
+				name="brand_category_id"
+				type="qazapmanufacturercats"
+				label="COM_QAZAP_BRAND_CATEGORIES_LABEL"
+				description="COM_QAZAP_BRAND_CATEGORIES_DESC"
+				published="1"
+				show_all="true" />				
+		</fieldset>
+	</fields>
+	
+	<fields name="params">
+		<fieldset name="basic"
+			label="COM_QAZAP_MENU_FIELDSET_PARAMS">
+			
+			<field 
+			name="brands_per_row" 
+			type="list" 
+			default="" 
+			label="COM_QAZAP_CONFIG_LBL_BRANDS_PER_ROW"
+			description="COM_QAZAP_CONFIG_DESC_BRANDS_PER_ROW">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field 
+				name="brands_link_page" 
+				type="list" 
+				default="" 
+				label="COM_QAZAP_CONFIG_LBL_BRAND_LINK_PAGE"
+				description="COM_QAZAP_CONFIG_DESC_BRAND_LINK_PAGE">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">COM_QAZAP_BRAND_DETAILS_PAGE</option>
+				<option value="2">COM_QAZAP_BRAND_PRODUCTS_PAGE</option>
+			</field>
+							
+		</fieldset>
+	</fields>	
+</metadata>

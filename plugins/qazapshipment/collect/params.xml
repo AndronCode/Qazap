@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" addfieldpath="administrator/components/com_qazap/models/fields">
+		<fieldset name="params_fieldset">
+		
+			<field 
+				name="min_order_value" 
+				type="text"
+				label="PLG_QAZAPSHIPMENT_COLLECT_FORM_LBL_MINIMUM_ORDER_VALUE" 
+				description="PLG_QAZAPSHIPMENT_COLLECT_FORM_DESC_MINIMUM_ORDER_VALUE" 
+				filter="string" />
+						
+			<field 
+				name="max_order_value" 
+				type="text" 
+				label="PLG_QAZAPSHIPMENT_COLLECT_FORM_LBL_MAXIMUM_ORDER_VALUE" 
+				description="PLG_QAZAPSHIPMENT_COLLECT_FORM_DESC_MAXIMUM_ORDER_VALUE" 
+				filter="string" />
+			
+			<field 
+				name="min_weight" 
+				type="text" 
+				label="PLG_QAZAPSHIPMENT_COLLECT_FORM_LBL_MINIMUM_WEIGHT_VALUE" 
+				description="PLG_QAZAPSHIPMENT_COLLECT_FORM_DESC_MINIMUM_WEIGHT_VALUE" 
+				filter="string" />
+			
+			<field 
+				name="max_weight" 
+				type="text" 
+				label="PLG_QAZAPSHIPMENT_COLLECT_FORM_LBL_MAXIMUM_WEIGHT_VALUE" 
+				description="PLG_QAZAPSHIPMENT_COLLECT_FORM_DESC_MAXIMUM_WEIGHT_VALUE" 
+				filter="string" />				
+				
+		</fieldset>					
+	</fields>
+</form>

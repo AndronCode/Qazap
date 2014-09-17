@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="id" 
+			type="text"
+			default="0"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field
+			name="currency" 
+			type="text"
+			class="input-xxlarge input-large-text"
+			hint="Enter Currency Name"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_CURRENCY"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_CURRENCY" 
+			required="true" 
+			filter="raw" /> 
+
+		<field 
+			name="exchange_rate" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_EXCHANGE_RATE"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_EXCHANGE_RATE" 
+			filter="raw" /> 
+
+		<field 
+			name="currency_symbol" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_CURRENCY_SYMBOL"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_CURRENCY_SYMBOL" 
+			filter="raw" /> 
+
+		<field 
+			name="code3letters" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_CODE3LETTERS"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_CODE3LETTERS" 
+			filter="raw" /> 
+
+		<field 
+			name="numeric_code" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_NUMERIC_CODE"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_NUMERIC_CODE" 
+			required="true" 
+			filter="raw" />
+
+		<field 
+			name="decimals" 
+			type="text"
+			hint="Enter Decimal Place i,e:2or3"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_DECIMALS"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_DECIMALS" 
+			required="true" 
+			filter="raw" />
+
+		<field 
+			name="decimals_symbol" 
+			type="text"
+			hint="Enter Decimal Syambol i,e: ',' or '.'"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_DECIMAL_SYMBOLS"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_DECIMAL_SYMBOLS" 
+			required="true" 
+			filter="raw" />
+
+		<field 
+			name="format" 
+			type="text"
+			hint="Enter Format i,e: {value}{symbol}"
+			label="COM_QAZAP_FORM_LBL_CURRENCY_FORMAT"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_FORMAT" 
+			required="true" 
+			filter="raw" />
+
+		<field 
+			name="thousand_separator" 
+			type="text"
+			hint="Enter Thousand Separator "
+			label="COM_QAZAP_FORM_LBL_CURRENCY_THOUSAND_SEPARATOR"
+			description="COM_QAZAP_FORM_DESC_CURRENCY_THOUSAND_SEPARATOR" 
+			required="true" 
+			filter="raw" />
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field 
+			name="created_by" 
+			type="user" 
+			label="COM_QAZAP_FORM_LBL_VENDOR_CREATED_BY"
+			description="COM_QAZAP_FORM_DESC_VENDOR_CREATED_BY"  />
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+		
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+		
+
+	</fieldset>
+
+</form>

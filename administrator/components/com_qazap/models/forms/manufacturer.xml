@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="id" 
+			type="text" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field 
+			name="manufacturer_name" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_NAME"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_NAME" 
+			required="true"
+			hint="Enter Brand Name"
+			class="input-xxlarge input-large-text" 
+			filter="text" />
+		
+		<field 
+			name="alias" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_ALIAS"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_ALIAS" 
+			hint="Enter Alias Name" 
+			filter="text" /> 
+
+		<field 
+			name="manufacturer_email"
+			type="email"
+			hint="Enter Email Address"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_EMAIL"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_EMAIL" 
+			required="true" 
+			filter="email" />
+
+		<field 
+			name="manufacturer_category"
+			type="qazapmanufacturercats"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_CATEGORIES"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_CATEGORIES" 
+			required="true" 
+			filter="raw" />
+
+		<field 
+			name="description" 
+			type="textarea"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_DESCRIPTION"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_DESCRIPTION" 
+			class="span12"
+			filter="JComponentHelper::filterText" /> 
+
+		<field 
+			name="images" 
+			type="qazapmedia"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_IMAGES"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_IMAGES" 
+			filter="raw" 
+			group="brands" 
+			multiple="multiple" 
+			imagesonly="1" /> 
+
+		<field 
+			name="manufacturer_url" 
+			type="url"
+			hint="www.manufacturer.com"
+			label="COM_QAZAP_FORM_LBL_MANUFACTURER_URL"
+			description="COM_QAZAP_FORM_DESC_MANUFACTURER_URL" 
+			filter="raw" /> 
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field 
+			name="created_by" 
+			type="user" 
+			label="JGLOBAL_CREATED_BY_LABEL" 
+			description="JGLOBAL_CREATED_BY_DESC"/>
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+
+	</fieldset>
+
+</form>

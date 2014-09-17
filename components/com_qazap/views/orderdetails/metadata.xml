@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Order Details">
+		<message><![CDATA[COM_QAZAP_DEFAULT_VIEW_ORDER_DETAILS_DESC]]></message>
+	</view>
+</metadata>

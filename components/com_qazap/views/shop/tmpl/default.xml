@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QAZAP_SHOP_VIEW_DEFAULT_TITLE" option="COM_QAZAP_SHOP_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_QAZAP_SHOP_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset 
+			name="request"
+			addfieldpath="/administrator/components/com_qazap/models/fields">
+
+			<field name="vendor_id" 
+				type="vendorlist"
+				label="COM_QAZAP_SHOP_VIEW_DEFAULT_SELECT_VENDOR_TITLE"
+				required="true"
+				description="COM_QAZAP_SHOP_VIEW_DEFAULT_SELECT_VENDOR_DESC" >
+				<option value="">COM_QAZAP_SELECT</option>
+			</field>
+				
+		</fieldset>
+	</fields>
+	
+	<fields name="params">
+		<fieldset
+			name="basic">
+					
+			<field 
+				name="show_latest_products_shop" 
+				type="list"
+				class="btn-group btn-group-yesno"
+				label="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_LABEL"
+				description="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field 
+				name="latest_products_per_row_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_LABEL"
+				description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_DESC"
+				default="" 
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER"
+				/>
+				
+			<field 
+				name="latest_products_limit_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_LABEL"
+				description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_DESC"
+				default=""
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER" 
+				/>
+				
+			<field 
+				name="show_featured_products_shop" 
+				type="list"
+				class="btn-group btn-group-yesno"
+				label="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_LABEL"
+				description="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field 
+				name="featured_products_per_row_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_LABEL"
+				description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_DESC"
+				default="" 
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER"
+				/>
+				
+			<field 
+				name="featured_products_limit_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_LABEL"
+				description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_DESC"
+				default="" 
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER"
+				/>
+				
+			<field 
+				name="show_random_products_shop" 
+				type="list"
+				class="btn-group btn-group-yesno"
+				label="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_LABEL"
+				description="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field 
+				name="random_products_per_row_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_LABEL"
+				description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_DESC"
+				default=""
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER" 
+				/>
+				
+			<field 
+				name="random_products_limit_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_LABEL"
+				description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_DESC"
+				default="" 
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER"
+				/>	
+				
+			<field 
+				name="show_topselling_products" 
+				type="list"
+				class="btn-group btn-group-yesno"
+				label="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_LABEL"
+				description="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field 
+				name="topselling_products_per_row_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_LABEL"
+				description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_DESC"
+				default=""
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER" 
+				/>
+				
+			<field 
+				name="topselling_products_limit_shop" 
+				type="text"
+				label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_LABEL"
+				description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_DESC"
+				default="" 
+				hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER"
+				/>
+		</fieldset>		
+	</fields>
+</metadata>

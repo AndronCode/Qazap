@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="vendor_group_id" 
+			type="text" default="0" 
+			label="COM_QAZAP_FORM_LBL_VENDOR_GROUP_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field 
+			name="title" 
+			type="text" 
+			required="required"
+			label="COM_QAZAP_FORM_LBL_VENDOR_GROUP_TITLE"
+			description="COM_QAZAP_FORM_DESC_VENDOR_GROUP_TITLE"
+			class="input-xxlarge input-large-text" 
+			filter="raw" /> 
+
+		<field 
+			name="description" 
+			type="textarea"
+			label="COM_QAZAP_FORM_LBL_VENDOR_GROUP_DESCRIPTION"
+			description="COM_QAZAP_FORM_DESC_VENDOR_GROUP_DESCRIPTION" 
+      class="span12" 
+      cols="100"
+      rows="10"
+      filter="JComponentHelper::filterText" /> 
+
+		<field 
+			name="commission" 
+			type="text" 
+			required="required"
+			label="COM_QAZAP_FORM_LBL_VENDOR_GROUP_COMMISSION"
+			description="COM_QAZAP_FORM_DESC_VENDOR_GROUP_COMMISSION" 
+			filter="raw" />
+
+		<field 
+			name="jusergroup_id" 
+			type="qazapusergroup" 
+			readonly="true"
+			label="COM_QAZAP_FORM_LBL_JOOMLA_USERGROUP_ID"
+			description="COM_QAZAP_FORM_DESC_JOOMLA_USERGROUP_ID" 
+			filter="integer" />
+
+		<field 
+			name="jview_id" 
+			type="qazapaccesslevel" 
+			readonly="true"
+			label="COM_QAZAP_FORM_LBL_JOOMLA_VIEWLEVEL_ID"
+			description="COM_QAZAP_FORM_DESC_JOOMLA_VIEWLEVEL_ID" 
+			filter="integer" />
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field 
+			name="created_by" 
+			type="user" 
+			readonly="true"
+			label="JGLOBAL_CREATED_BY_LABEL"
+			description="JGLOBAL_CREATED_BY_DESC"  />
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"			
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+	</fieldset>
+
+</form>

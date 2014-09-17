@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Qazap Search</name>
+	<author>Qazap Team</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>Copyright (C) 2014 VirtuePlanet Services LLP. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@qazap.com</authorEmail>
+	<authorUrl>www.qazap.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Search Module for Qazap.</description>
+	<files>
+		<filename module="mod_qazap_search">mod_qazap_search.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_qazap_search.xml</filename>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_qazap_search.ini</language>
+		<language tag="en-GB">en-GB.mod_qazap_search.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SEARCH" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field
+					name="show_categories"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="MOD_QAZAP_SEARCH_SHOW_CATEGORIES_LBL"
+					description="MOD_QAZAP_SEARCH_SHOW_CATEGORIES_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="label"
+					type="label"
+					label="MOD_QAZAP_SEARCH_FIELD_LABEL_TEXT_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_LABEL_TEXT_DESC" />
+				<field
+					name="width"
+					type="text"
+					default="20"
+					label="MOD_QAZAP_SEARCH_FIELD_BOXWIDTH_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_BOXWIDTH_DESC" />
+				<field
+					name="text"
+					type="text"
+					label="MOD_QAZAP_SEARCH_FIELD_TEXT_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_TEXT_DESC" />
+				<field
+					name="button"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_QAZAP_SEARCH_FIELD_BUTTON_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_BUTTON_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="button_pos"
+					type="list"
+					default="left"
+					label="MOD_QAZAP_SEARCH_FIELD_BUTTONPOS_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_BUTTONPOS_DESC">
+					<option value="right">MOD_QAZAP_SEARCH_FIELD_VALUE_RIGHT</option>
+					<option value="left">MOD_QAZAP_SEARCH_FIELD_VALUE_LEFT</option>
+					<option value="top">MOD_QAZAP_SEARCH_FIELD_VALUE_TOP</option>
+					<option value="bottom">MOD_QAZAP_SEARCH_FIELD_VALUE_BOTTOM</option>
+				</field>
+				<field
+					name="imagebutton"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_QAZAP_SEARCH_FIELD_IMAGEBUTTON_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_IMAGEBUTTON_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="button_text"
+					type="text"
+					label="MOD_QAZAP_SEARCH_FIELD_BUTTONTEXT_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_BUTTONTEXT_DESC" />
+				<field
+					name="opensearch"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					label="MOD_QAZAP_SEARCH_FIELD_OPENSEARCH_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_OPENSEARCH_DESC"
+					default="1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="opensearch_title"
+					type="text"
+					label="MOD_QAZAP_SEARCH_FIELD_OPENSEARCH_TEXT_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_OPENSEARCH_TEXT_DESC" />
+				<field
+					name="set_itemid"
+					type="menuitem"
+					default="0"
+					label="MOD_QAZAP_SEARCH_FIELD_SETITEMID_LABEL"
+					description="MOD_QAZAP_SEARCH_FIELD_SETITEMID_DESC">
+					<option value="0">MOD_QAZAP_SEARCH_SELECT_MENU_ITEMID</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" addfieldpath="administrator/components/com_qazap/models/fields">
+		<fieldset name="params_fieldset">
+
+			<field 
+				name="merchant" 
+				type="text" 
+				size="50" 
+				default=""
+				hint="PLG_QAZAPPAYMENT_PAYPAL_MERCHANT_HINT"  
+				label="PLG_QAZAPPAYMENT_PAYPAL_MERCHANT_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_MERCHANT_DESC"/>
+				
+			<field 
+				name="payment_action" 
+				type="list" 
+				default="sale" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_PAYMENT_ACTION_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_PAYMENT_ACTION_DESC" >					
+					<option value="sale">PLG_QAZAPPAYMENT_PAYPAL_DIRECT_PAYMENT</option>
+					<option value="authorization">PLG_QAZAPPAYMENT_PAYPAL_AUTHORIZE_CAPTURE</option>
+			</field>
+			
+			<field 
+				name="processing_currency" 
+				type="list" 
+				default="order" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_PROCESSING_CURRENCY_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_PROCESSING_CURRENCY_DESC" >					
+					<option value="order">PLG_QAZAPPAYMENT_PAYPAL_ORDER_CURRENCY</option>
+					<option value="user">PLG_QAZAPPAYMENT_PAYPAL_USER_CURRENCY</option>
+			</field>			
+			
+			<field 
+				type="spacer"
+				label="PLG_QAZAPPAYMENT_PAYPAL_TESTING_OPTIONS" />
+			
+			<field 
+				name="sandbox" 
+				type="radio" 
+				default="0" 
+				class="radio btn-group btn-group-yesno"
+				label="PLG_QAZAPPAYMENT_PAYPAL_SANDBOX_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_SANDBOX_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+			</field>
+			
+			<field 
+				name="sandbox_merchant" 
+				type="text" 
+				size="50" 
+				default="" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_SANDBOX_MERCHANT_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_SANDBOX_MERCHANT_DESC" />
+				
+			<field 
+				name="debug" 
+				type="radio" 
+				default="0" 
+				class="radio btn-group btn-group-yesno"
+				label="PLG_QAZAPPAYMENT_PAYPAL_DEBUG_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_DEBUG_DESC" >				
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+			</field>
+						
+			<field 
+				type="spacer"
+				label="PLG_QAZAPPAYMENT_PAYPAL_DISPLAY_OPTIONS" />
+			
+			<field 
+				name="cbt" 
+				type="text" 
+				size="50" 
+				default="" 
+				hint="PLG_QAZAPPAYMENT_PAYPAL_CBT_HINT"
+				label="PLG_QAZAPPAYMENT_PAYPAL_CBT_LABEL"
+				description="PLG_QAZAPPAYMENT_PAYPAL_CBT_DESC" />
+			 
+			<field 
+				name="cpp_header_image" 
+				type="url"
+				default=""
+				hint="PLG_QAZAPPAYMENT_PAYPAL_HEADER_HINT"
+				label="PLG_QAZAPPAYMENT_PAYPAL_HEADER_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_HEADER_DESC" />
+			
+			<field 
+				name="cpp_headerback_color" 
+				type="color" 
+				size="50" 
+				default="" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_HEADERBACK_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_HEADERBACK_DESC" />
+			
+			<field 
+				name="cpp_headerborder_color" 
+				type="color" 
+				size="50" 
+				default="" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_HEADERBORDER_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_HEADERBORDER_DESC" />
+				
+			<field 
+				type="spacer" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_ORDERSTATUS_LABEL"
+				class="qazap-params-spacer" />	
+				
+			<field 
+				name="pending_status" 
+				type="orderstates" 
+				default="P" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_PENDING_TRANSACTION_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_PENDING_TRANSACTION_DESC" />		
+				
+			<field 
+				name="success_status" 
+				type="orderstates" 
+				default="C" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_SUCCESS_TRANSACTION_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_SUCCESS_TRANSACTION_DESC" />
+				
+			<field 
+				name="cancel_status" 
+				type="orderstates" 
+				default="X" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_CANCEL_TRANSACTION_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_CANCEL_TRANSACTION_DESC" />		
+				
+			<field 
+				name="refund_status" 
+				type="orderstates" 
+				default="R" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_REFUND_TRANSACTION_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_REFUND_TRANSACTION_DESC" />		
+				
+			<field 
+				name="partial_refund_status" 
+				type="orderstates" 
+				default="R" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_PARTIAL_REFUND_TRANSACTION_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_PARTIAL_REFUND_TRANSACTION_DESC" />
+																									
+			<field 
+				type="spacer" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_ADVANCED_OPTIONS_LABEL"
+				class="qazap-params-spacer" />	
+						
+			<field 
+				name="min_order_value" 
+				type="text"
+				label="PLG_QAZAPPAYMENT_PAYPAL_MINIMUM_ORDER_VALUE_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_MINIMUM_ORDER_VALUE_DESC" 
+				filter="string" />
+						
+			<field 
+				name="max_order_value" 
+				type="text" 
+				label="PLG_QAZAPPAYMENT_PAYPAL_MAXIMUM_ORDER_VALUE_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_MAXIMUM_ORDER_VALUE_DESC" 
+				filter="string" />
+				
+			<field 
+				name="accepted_zipcodes" 
+				type="qazaptags"
+				hint="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_ZIPCODES_HINT"
+				label="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_ZIPCODES_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_ZIPCODES_DESC" 
+				filter="string" />
+				
+			<field 
+				name="min_weight" 
+				type="text"
+				hint="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_WEIGHT_HINT"
+				label="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_WEIGHT_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_WEIGHT_DESC" 
+				filter="string" />
+				
+			<field 
+				name="weight_uom" 
+				type="weight"
+				label="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_WEIGHT_UOM_LABEL" 
+				description="PLG_QAZAPPAYMENT_PAYPAL_ACCEPTED_WEIGHT_UOM_DESC" 
+				filter="int" />																					
+				
+		</fieldset>					
+	</fields>
+</form>

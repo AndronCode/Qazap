@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_QAZAP_ITEMS_SEARCH_FILTER"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="state"
+			type="list"
+			label="COM_QAZAP_FILTER_PUBLISHED"
+			description="COM_CQAZAP_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="*">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">COM_QAZAP_FORM_LBL_MEMBER_ACTIVE</option>
+			<option value="0">COM_QAZAP_FORM_LBL_MEMBER_EXPIRE</option>
+		</field>
+		<field
+			name="plan_name"
+			type="membership"
+			label="COM_QAZAP_FILTER_PLAN_NAME"
+			description="COM_CQAZAP_FILTER_PLAN_NAME_DESC"
+			onchange="this.form.submit();"
+			>
+		</field>
+		<field
+			name="valid_till"
+			type="calendar"
+			hint="COM_QAZAP_FILTER_MEMBER_VALID_TILL_LBL"
+			label="COM_QAZAP_FILTER_MEMBER_VALID_TILL_LBL"
+			description="COM_QAZAP_FILTER_MEMBER_VALID_TILL_DESC"
+			onchange="this.form.submit();" />
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.ordering ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.id ASC">COM_QAZAP_MEMBERS_ID_ASCENDING</option>
+			<option value="a.id DESC">COM_QAZAP_MEMBERS_ID_DESCENDING</option>
+			<option value="a.ordering ASC">COM_QAZAP_MEMBERS_ORDERING_ASCENDING</option>
+			<option value="a.ordering DESC">COM_QAZAP_MEMBERS_ORDERING_DESCENDING</option>
+			<option value="b.username ASC">COM_QAZAP_MEMBERS_USER_NAME_ASCENDING</option>
+			<option value="b.username DESC">COM_QAZAP_MEMBERS_USER_NAME_DESCENDING</option>
+			<option value="c.plan_name ASC">COM_QAZAP_MEMBERS_MEMBERSHIP_ID_ASCENDING</option>
+			<option value="c.plan_name DESC">COM_QAZAP_MEMBERS_MEMBERSHIP_ID_DESCENDING</option>
+			<option value="a.from_date ASC">COM_QAZAP_MEMBERS_FROM_DATE_ASCENDING</option>
+			<option value="a.from_date DESC">COM_QAZAP_MEMBERS_FROM_DATE_DESCENDING</option>
+			<option value="a.to_date ASC">COM_QAZAP_MEMBERS_TO_DATE_ASCENDING</option>
+			<option value="a.to_date DESC">COM_QAZAP_MEMBERS_TO_DATE_DESCENDING</option>
+			
+								
+			
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CATEGORIES_LIST_LIMIT"
+			description="COM_CATEGORIES_LIST_LIMIT_DESC"
+			format="%Y-%m-%d %H:%M:%S"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

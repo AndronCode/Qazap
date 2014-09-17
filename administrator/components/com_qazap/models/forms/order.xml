@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<field 
+		name="ordergroup_id" 
+		type="text" 
+		default="0" 
+		label="COM_QAZAP_ORDERGROUP_ID_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_ID_DESC" />
+		
+	<field 
+		name="ordergroup_number" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_NUMBER_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_NUMBER_DESC" />
+		
+	<field 
+		name="order_count"
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_ORDER_COUNT_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_ORDER_COUNT_DESC" />		
+		
+	<field 
+		name="order_currency" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_CURRENCY_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_CURRENCY_DESC" />
+		
+	<field 
+		name="user_currency" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_USER_CURRENCY_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_USER_CURRENCY_DESC" />
+		
+	<field 
+		name="currency_exchange_rate" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_CURRENCY_EXCHANGE_RATE_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_CURRENCY_EXCHANGE_RATE_DESC" />
+		
+	<field 
+		name="cart_payment_method_id" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_PAYMENT_METHOD_ID_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_PAYMENT_METHOD_ID_DESC" />		
+		
+	<field 
+		name="cart_payment_method_html" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_PAYMENT_METHOD_HTML_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_PAYMENT_METHOD_HTML_DESC" 
+		filter="html" />
+		
+	<field 
+		name="cart_payment_method_name" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_PAYMENT_METHOD_NAME_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_PAYMENT_METHOD_NAME_DESC" />
+		
+	<field 
+		name="cart_shipment_method_id" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_SHIPMENT_METHOD_ID_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_SHIPMENT_METHOD_ID_DESC" />		
+		
+	<field 
+		name="cart_shipment_method_html" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_SHIPMENT_METHOD_HTML_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_SHIPMENT_METHOD_HTML_DESC" 
+		filter="html" />
+		
+	<field 
+		name="cart_shipment_method_name" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_SHIPMENT_METHOD_NAME_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_SHIPMENT_METHOD_NAME_DESC" />		
+
+	<field 
+		name="cart_total" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_CART_TOTAL_LABEL"
+		description="COM_QAZAP_ORDERGROUP_CART_TOTAL_DESC" 
+		class="readonly"
+		readonly="true"
+		filter="raw" />
+		
+	<field 
+		name="payment_received" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_PAYMENT_RECEIVED_LABEL"
+		description="COM_QAZAP_ORDERGROUP_PAYMENT_RECEIVED_DESC" 
+		filter="float" />
+		
+	<field 
+		name="payment_refunded" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_PAYMENT_REFUNDED_LABEL"
+		description="COM_QAZAP_ORDERGROUP_PAYMENT_REFUNDED_DESC" 
+		filter="float" />	
+		
+	<field 
+		name="payment_balance" 
+		type="text"
+		class="readonly"
+		readonly="true"
+		label="COM_QAZAP_ORDERGROUP_PAYMENT_BALANCE_LABEL"
+		description="COM_QAZAP_ORDERGROUP_PAYMENT_BALANCE_DESC" 
+		filter="raw" />					
+		
+	<field 
+		name="total_in_order_currency" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_TOTAL_ORDER_CURRENCY_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_TOTAL_ORDER_CURRENCY_DESC" />
+		
+	<field 
+		name="total_in_user_currency" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_TOTAL_USER_CURRENCY_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_TOTAL_USER_CURRENCY_DESC" />
+		
+	<field 
+		name="order_status" 
+		type="orderstates" 
+		label="COM_QAZAP_ORDERGROUP_ORDER_STATUS_LABEL"
+		description="COM_QAZAP_ORDERGROUP_ORDER_STATUS_DESC" />						
+
+	<field 
+		name="apply_to_all_orders" 
+		type="radio"
+		class="btn-group btn-group-yesno"
+		label="COM_QAZAP_ORDERGROUP_APPLY_TO_ALL_ORDERS_LABEL"
+		description="COM_QAZAP_ORDERGROUP_APPLY_TO_ALL_ORDERS_DESC"
+		default="1" >
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	
+	<field 
+		name="apply_to_all_items" 
+		type="radio"
+		class="btn-group btn-group-yesno"
+		label="COM_QAZAP_ORDERGROUP_APPLY_TO_ALL_ITEMS_LABEL"
+		description="COM_QAZAP_ORDERGROUP_APPLY_TO_ALL_ITEMS_DESC"
+		default="1" >
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>	
+	
+	<field 
+		name="customer_note" 
+		type="textarea"
+		readonly="true"
+		class="span12 readonly"
+		label="COM_QAZAP_ORDERGROUP_CUSTOMER_NOTE_LABEL"
+		description="COM_QAZAP_ORDERGROUP_CUSTOMER_NOTE_DESC"
+		rows="4" />	
+		
+	<field 
+		name="ip_address" 
+		type="text"
+		readonly="true"
+		class="readonly"
+		label="COM_QAZAP_ORDERGROUP_IP_ADDRESS_LABEL"
+		description="COM_QAZAP_ORDERGROUP_IP_ADDRESS_DESC" />
+		
+	<field 
+		name="access_key" 
+		type="text"
+		readonly="true"
+		class="readonly"
+		label="COM_QAZAP_ORDERGROUP_ACCESS_KEY_LABEL"
+		description="COM_QAZAP_ORDERGROUP_ACCESS_KEY_DESC" />					
+
+	<field 
+		name="comment" 
+		type="textarea" 
+		label="COM_QAZAP_ORDERGROUP_COMMENTS_LABEL"
+		description="COM_QAZAP_ORDERGROUP_COMMENTS_DESC"
+		rows="8" />		
+
+	<field 
+		name="user_id" 
+		type="text" 
+		label="COM_QAZAP_ORDERGROUP_USER_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_USER_DESC" />	
+		
+	<field 
+		name="created_on" 
+		type="text" 
+		default="0" 
+		label="COM_QAZAP_ORDERGROUP_DATE_LABEL"
+		readonly="true" 
+		class="readonly"
+		description="COM_QAZAP_ORDERGROUP_DATE_DESC" />
+
+
+</form>

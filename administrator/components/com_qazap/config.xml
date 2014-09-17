@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset 
+		name="general"
+		label="COM_QAZAP_CONFIG_LBL_GENERAL"
+		description="COM_QAZAP_CONFIG_DESC_GENERAL"		
+		addfieldpath="administrator/components/com_qazap/models/fields">
+		
+		<field 
+			name="qazap_version"
+			type="hidden"
+			default="1.0.0" />
+		
+		<field
+			name="spacer11"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_DISPLAY_OPTIONS" />
+		
+		<field 
+			name="shop_offline" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"    
+			label="COM_QAZAP_CONFIG_LBL_SHOP_IS_OFFLINE"
+			description="COM_QAZAP_CONFIG_DESC_SHOP_IS_OFFLINE" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="offline_message" 
+			type="textarea"    
+			label="COM_QAZAP_CONFIG_LBL_OFFLINE_MESSAGE"
+			default="This shop is down for maintenance. Please check back again soon."
+			description="COM_QAZAP_CONFIG_DESC_OFFLINE_MESSAGE" />		
+		
+		<field 
+			name="catalogue_only" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"    
+			label="COM_QAZAP_CONFIG_LBL_CATALOGUE_VIEW"
+			description="COM_QAZAP_CONFIG_DESC_CATALOGUE_VIEW" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>	
+		
+		<field 
+			name="default_currency" 
+			type="qazapcurrency" 
+			required="required" 
+			default="111"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_CURRENCY"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_CURRENCY" />
+
+		<field 
+			name="accepted_currencies" 
+			type="qazapcurrency" 
+			multiple="true"               
+			label="COM_QAZAP_CONFIG_LBL_ACCEPTED_CURRENCIES"
+			description="COM_QAZAP_CONFIG_DESC_ACCEPTED_CURRENCIES" />
+			
+		<field 
+			name="multiple_product_pricing" 
+			type="radio" 
+			class="btn-group btn-group-yesno"			
+			default="0" 
+			label="COM_QAZAP_CONFIG_LBL_MULTIPLE_PRODUCT_PRICING" 
+			description="COM_QAZAP_CONFIG_DESC_MULTIPLE_PRODUCT_PRICING">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>	
+		
+		<field 
+			name="enablestockcheck" 
+			type="radio" 
+			class="btn-group btn-group-yesno"			
+			default="1" 
+			label="COM_QAZAP_CONFIG_LBL_STOCK_CHECK" 
+			description="COM_QAZAP_CONFIG_DESC_STOCK_CHECK">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="intangible" 
+			type="radio" 
+			class="btn-group btn-group-yesno"			
+			default="0" 
+			label="COM_QAZAP_CONFIG_LBL_INTANGIBLE" 
+			description="COM_QAZAP_CONFIG_DESC_INTANGIBLE">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="exchange_source" 
+			type="list" 	
+			default="ecb" 
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_EXCHANGE_SERVER" 
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_EXCHANGE_SERVER">
+		  <option value="ecb">ECB</option>
+		  <option value="yahoo">YAHOO</option>
+		</field>
+		
+		
+		
+		<field
+			name="spacer1"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_DOWNLOADABLE_PRODUCT_OPTIONS"/>		
+		
+		<field 
+			name="downloadable" 
+			type="radio" 
+			class="btn-group btn-group-yesno"			
+			default="0" 
+			label="COM_QAZAP_CONFIG_LBL_DOWNLOADABLE" 
+			description="COM_QAZAP_CONFIG_DESC_DOWNLOADABLE">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="download_path" 
+			type="qazappath" 
+			label="COM_QAZAP_CONFIG_LBL_DOWNLOAD_PATH" 
+			description="COM_QAZAP_CONFIG_DESC_DOWNLOAD_PATH" 
+			filter="raw"/>
+			
+		<field 
+			name="download_activation_status" 
+			type="orderstates" 
+			label="COM_QAZAP_CONFIG_LBL_DOWNLOAD_ACTIVATION_STATUS" 
+			description="COM_QAZAP_CONFIG_DESC_DOWNLOAD_ACTIVATION_STATUS"
+			default="C"
+			multiple="true"/>				
+			
+		<field 
+			name="download_limit" 
+			type="text" 
+			label="COM_QAZAP_CONFIG_LBL_DOWNLOAD_LIMIT" 
+			hint="COM_QAZAP_CONFIG_LBL_DOWNLOAD_LIMIT"
+			description="COM_QAZAP_CONFIG_DESC_DOWNLOAD_LIMIT"
+			filter="integer">
+			<option value="0">COM_QAZAP_CONFIG_DESC_DOWNLOAD_NO_LIMIT</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option value="30">30</option>
+			<option value="40">40</option>
+		</field>
+		
+		<field 
+			name="download_validity" 
+			type="text" 
+			hint="COM_QAZAP_CONFIG_LBL_DOWNLOAD_VALIDITY"
+			label="COM_QAZAP_CONFIG_LBL_DOWNLOAD_VALIDITY" 
+			description="COM_QAZAP_CONFIG_DESC_DOWNLOAD_VALIDITY"
+			filter="integer">
+			<option value="0">COM_QAZAP_CONFIG_DOWNLOAD_LIFETIME</option>
+			<option value="7">COM_QAZAP_CONFIG_DOWNLOAD_7_DAYS</option>
+			<option value="30">COM_QAZAP_CONFIG_DOWNLOAD_30_DAYS</option>
+			<option value="365">COM_QAZAP_CONFIG_DOWNLOAD_365_DAYS</option>
+		</field>
+		
+		<field
+			name="spacer2"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_IMAGE_OPTIONS"/>
+
+		<field 
+		name="medium_width" 
+		type="text"
+		label="COM_QAZAP_CONFIG_LBL_IMAGE_MEDIUM_WIDTH"
+		description="COM_QAZAP_CONFIG_DESC_IMAGE_MEDIUM_WIDTH"
+		filter="integer"
+		default="180" />
+		
+		<field 
+		name="medium_height" 
+		type="text"
+		label="COM_QAZAP_CONFIG_LBL_IMAGE_MEDIUM_HEIGHT"
+		description="COM_QAZAP_CONFIG_DESC_IMAGE_MEDIUM_HEIGHT"
+		filter="integer"
+		default="180" />
+
+		<field 
+		name="thumbnail_width" 
+		type="text"
+		label="COM_QAZAP_CONFIG_LBL_IMAGE_THUMBNAIL_WIDTH"
+		description="COM_QAZAP_CONFIG_DESC_IMAGE_THUMBNAIL_WIDTH"
+		filter="integer"
+		default="90" />
+		
+		<field 
+		name="thumbnail_height" 
+		type="text"
+		label="COM_QAZAP_CONFIG_LBL_IMAGE_THUMBNAIL_HEIGHT"
+		description="COM_QAZAP_CONFIG_DESC_IMAGE_THUMBNAIL_HEIGHT"
+		filter="integer"
+		default="90" />
+		
+		<field 
+			name="crop" 
+			type="radio" 
+			class="btn-group btn-group-yesno"			
+			default="0" 
+			label="COM_QAZAP_CONFIG_LBL_IMAGE_CROPPING_ENABLE" 
+			description="COM_QAZAP_CONFIG_DESC_IMAGE_CROPPING_ENABLE">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="no_image_file" 
+			type="media" 
+			directory="qazap"	
+			default="images/qazap/no-image.jpg"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_IMAGE" 
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_IMAGE"/>
+
+	</fieldset>
+	
+	<fieldset 
+		name="vendor"
+		label="COM_QAZAP_CONFIG_LBL_VENDOR"
+		description="COM_QAZAP_CONFIG_DESC_VENDOR" >			
+
+		<field 
+			name="enable_vendor_registration" 
+			type="radio" 
+			class="btn-group btn-group-yesno"			
+			default="1" 
+			label="COM_QAZAP_CONFIG_LBL_VENDOR_REGISTRATION" 
+			description="COM_QAZAP_CONFIG_DESC_VENDOR_REGISTRATION">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+
+		<field 
+			name="vendor_admin_approval" 
+			type="radio" 
+			default="0" 
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_VENDOR_ADMIN_APPROVAL"
+			description="COM_QAZAP_CONFIG_DESC_VENDOR_ADMIN_APPROVAL" >
+			<option value ="1">JYES</option>				
+			<option value ="0">JNO</option>		
+		</field>
+
+		<field 
+			name="new_vendor_email_to_admin" 
+			type="radio" 
+			class="btn-group btn-group-yesno"  
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_NEW_VENDOR_SEND_MAIL_TO_ADMIN"
+			description="COM_QAZAP_CONFIG_DESC_NEW_VENDOR_SEND_MAIL_TO_ADMIN" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option> 
+		</field>
+		
+		<field 
+			name="vendor_statuschange_email_to_admin" 
+			type="radio" class="btn-group btn-group-yesno" 
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_VENDOR_STATUS_CHANGE_SEND_MAIL_TO_ADMIN"
+			description="COM_QAZAP_CONFIG_DESC_VENDOR_STATUS_CHANGE_SEND_MAIL_TO_ADMIN" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option> 
+		</field>
+		
+		<field 
+		name="recent_order_limit" 
+		type="text"
+		label="COM_QAZAP_CONFIG_LBL_RECENT_ORDER_LIMIT"
+		description="COM_QAZAP_CONFIG_DESC_RECENT_ORDER_LIMIT"
+		filter="integer"
+		default="5" />
+				
+		<field 
+			name="payment_mail_to_admin"
+			type="radio"
+			class="btn-group btn-group-yesno"
+ 			label="COM_QAZAP_CONFIG_LBL_PAYMENT_MAIL_TO_ADMIN"
+			description="COM_QAZAP_CONFIG_DESC_PAYMENT_MAIL_TO_ADMIN"
+			default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+		<field 
+			name="default_vendor_group"
+			type="vendorgroup"
+			default="1"
+ 			label="COM_QAZAP_CONFIG_LBL_DEFAULT_VENDOR_GROUP"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_VENDOR_GROUP"/>
+		<field 
+			name="display_group"
+			type="radio"
+			class="btn-group btn-group-yesno"
+ 			label="COM_QAZAP_CONFIG_LBL_DISPLAY_GROUP_OPTION"
+			description="COM_QAZAP_CONFIG_DESC_DISPLAY_GROUP_OPTION"
+			default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+		<field 
+			name="display_categories"
+			type="radio"
+			class="btn-group btn-group-yesno"
+ 			label="COM_QAZAP_CONFIG_LBL_DISPLAY_CATEGORY_SELECTION"
+			description="COM_QAZAP_CONFIG_DESC_DISPLAY_CATEGORY_SELECTION"
+			default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+		<field 
+			name="display_shipments"
+			type="radio"
+			class="btn-group btn-group-yesno"
+ 			label="COM_QAZAP_CONFIG_LBL_DISPLAY_SHIPMENT_SELECTION"
+			description="COM_QAZAP_CONFIG_DESC_DISPLAY_SHIPMENT_SELECTION"
+			default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="shops"
+		label="COM_QAZAP_CONFIG_LBL_SHOPS"
+		description="COM_QAZAP_CONFIG_DESC_SHOPS" >
+
+		<field 
+			name="store_info_display"
+			type="radio"
+			class="btn-group btn-group-yesno"
+ 			label="COM_QAZAP_CONFIG_LBL_STORE_INFO_DISPLAY"
+			description="COM_QAZAP_CONFIG_DESC_STORE_INFO_DISPLAY"
+			default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="shops_per_row" 
+			type="text"
+			label="COM_QAZAP_CONFIG_SHOPS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_SHOPS_PER_ROW_DESC"
+			default="2" 
+			filter="integer" />
+
+		<field
+			type="spacer"
+			hr="true" />
+				
+		<field 
+			name="show_latest_products_shop" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="latest_products_per_row_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="latest_products_limit_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="show_featured_products_shop" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="featured_products_per_row_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="featured_products_limit_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="show_random_products_shop" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_DESC"
+			default="0">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="random_products_per_row_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="random_products_limit_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />	
+			
+		<field 
+			name="show_topselling_products" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_DESC"
+			default="0">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="topselling_products_per_row_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="topselling_products_limit_shop" 
+			type="text"
+			label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />	
+			
+	</fieldset>
+	
+	<fieldset 
+		name="categories"
+		label="COM_QAZAP_CONFIG_LBL_CATEGORIES"
+		description="COM_QAZAP_CONFIG_DESC_CATEGORIES" >
+		
+		<field
+			name="categories_layout" 
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_qazap"
+			view="categories" />			
+		
+		<field 
+			name="show_category_description_cat" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_BASE_DESCRIPTION_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_BASE_DESCRIPTION_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_category_image_cat" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_BASE_IMAGE_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_BASE_IMAGE_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>		
+
+		<field
+			name="subcategories_per_row_cat"
+			type="text"
+			label="COM_QAZAP_LBL_CONFIG_SUBCATEGORIES_PER_ROW_CAT"
+			description="COM_QAZAP_DESC_CONFIG_SUBCATEGORIES_PER_ROW_CAT"
+			filter="integer" 
+			default="2"
+			useglobal="true" />				
+
+		<field 
+			name="maxLevelcat" 
+			type="list"
+			description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL" 
+			default="-1">
+				<option value="-1">JALL</option>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+		</field>
+
+		<field 
+			name="show_empty_categories_cat" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+			description="COM_CONTENT_SHOW_EMPTY_CATEGORIES_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+
+		<field 
+			name="show_subcat_image_cat" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_LABEL"
+			description="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_DESC" 
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+
+		<field 
+			name="show_cat_num_products_cat" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_NUMBER_CATEGORY_ITEMS_LABEL"
+			description="COM_QAZAP_NUMBER_CATEGORY_ITEMS_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="spacer2"
+			type="spacer"
+			hr="true"/>		
+				
+		<field 
+			name="show_latest_products" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="latest_products_per_row" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="latest_products_limit" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="show_featured_products" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="featured_products_per_row" 
+			type="text"
+			label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="featured_products_limit" 
+			type="text"
+			label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="show_random_products" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_DESC"
+			default="0">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="random_products_per_row" 
+			type="text"
+			label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="random_products_limit" 
+			type="text"
+			label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />	
+			
+		<field 
+			name="show_topselling_products" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_DESC"
+			default="0">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="topselling_products_per_row" 
+			type="text"
+			label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_DESC"
+			default="3" 
+			filter="integer" />
+			
+		<field 
+			name="topselling_products_limit" 
+			type="text"
+			label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_DESC"
+			default="3" 
+			filter="integer" />															
+			
+		
+	</fieldset>
+	
+	<fieldset 
+		name="category"
+		label="COM_QAZAP_CONFIG_LBL_CATEGORY"
+		description="COM_QAZAP_CONFIG_DESC_CATEGORY" >		
+		
+		<field
+			name="category_layout" type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_qazap"
+			view="category" />
+			
+		<field 
+			name="show_category_title" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="JGLOBAL_SHOW_CATEGORY_TITLE"
+			description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_category_description" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+			description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+			default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>			
+		</field>			
+		
+		<field 
+			name="show_category_image" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+			description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>	
+							
+		<field 
+			name="display_subcategories"
+			type="radio"
+			class="btn-group btn-group-yesno"
+ 			label="COM_QAZAP_LBL_DISPLAY_SUBCATEGORIES"
+			description="COM_QAZAP_DESC_DISPLAY_SUBCATEGORIES"
+			default="1">
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="subcategories_per_row"
+			type="text"
+			label="COM_QAZAP_LBL_SUBCATEGORIES_PER_ROW"
+			description="COM_QAZAP_DESC_SUBCATEGORIES_PER_ROW"
+			filter="integer" 
+			default="4"
+			useglobal="true" />			
+		
+		<field name="show_subcategory_title"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_LBL_SUBCATEGORIES_TITLE_LABEL"
+			description="COM_QAZAP_LBL_SUBCATEGORIES_TITLE_DESC"
+			default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+
+		<field name="show_subcategory_image"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_LABEL"
+			description="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_DESC">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field name="show_subcategory_num_products"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SUBCATEGORY_ITEMS_LABEL"
+			description="COM_QAZAP_CONFIG_SUBCATEGORY_ITEMS_DESC"
+			default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>		
+
+		<field name="show_empty_subcategories"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_EMPTY_SUBCATEGORIES_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_EMPTY_SUBCATEGORIES_DESC"
+			default="1" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field name="show_no_products"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_SHOW_NO_PRODUCTS"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_NO_PRODUCTS"
+			default="1" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="spacer6"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_ADVANCE_SAECRH_OPTIONS" />
+			
+		<field
+			name="show_advance_search"
+			type="radio"
+			default="0"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_ADVANCE_SEARCH_LBL"
+			description="COM_QAZAP_CONFIG_SHOW_ADVANCE_SEARCH_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="show_categories"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SEARCH_SHOW_CATEGORIES_LBL"
+			description="MOD_QAZAP_CONFIG_SEARCH_SHOW_CATEGORIES_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>	
+		
+	</fieldset>
+	
+	<fieldset 
+		name="product_list"
+		label="COM_QAZAP_PRODUCT_LIST_FIELDSET_LABEL"
+		description="COM_QAZAP_PRODUCT_LIST_FIELDSET_DESC" >
+
+		<field name="categories_as_filter"
+			type="radio"
+			label="COM_QAZAP_CONFIG_LBL_USE_CATEGORIES_AS_FILTER"
+			description="COM_QAZAP_CONFIG_DESC_USE_CATEGORIES_AS_FILTER"
+			class="btn-group btn-group-yesno"
+			default="1" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="products_per_row" 
+			type="text"
+			label="COM_QAZAP_LBL_PRODUCTS_PER_ROW"
+			description="COM_QAZAP_DESC_PRODUCTS_PER_ROW"
+			default="4" 
+			filter="integer" />
+			
+		<field name="product_list_limit" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LBL_LIST_LIMIT"
+			description="COM_QAZAP_CONFIG_DESC_LIST_LIMIT"
+			filter="integer"
+			default="20" />		
+			
+		<field
+			name="product_ordering"
+			type="qazapproductorder"
+			label="COM_QAZAP_LBL_PRODUCT_DISPLAY_ORDER"
+			description="COM_QAZAP_DESC_PRODUCT_DISPLAY_ORDER"
+			default="p.ordering" />	
+			
+		<field
+			name="product_order_dir"
+			type="list"
+			label="COM_QAZAP_LBL_PRODUCT_DISPLAY_DIR"				
+			description="COM_QAZAP_DESC_PRODUCT_DISPLAY_DIR" 
+			default="ASC">
+			<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+			<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+		</field>
+
+		<field
+			name="product_sorting"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_PRODUCT_SORTING"
+			description="COM_QAZAP_CONFIG_LBL_PRODUCT_SORTING" 
+			default="1" >
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>			
+		
+		<field
+			name="product_sorting_options"
+			type="qazapproductorder"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_PRODUCT_SORTING_OPTIONS"
+			description="COM_QAZAP_CONFIG_DESC_PRODUCT_SORTING_OPTIONS"
+			multiple="multiple"
+			default="p.ordering,pd.product_name,p.product_baseprice" />	
+			
+		<field
+			name="show_add_to_cart_productlist"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_ADDTOCART_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_ADDTOCART_DESC" 
+			default="1" >
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="show_short_description_productlist"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_SHORT_DESCRIPTION_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_SHORT_DESCRIPTION_DESC" 
+			default="1" >
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="price_filter_type"
+			type="list"
+			default="baseprice"    
+			label="COM_QAZAP_CONFIG_PRICE_FILTER_TYPE_LBL"
+			description="COM_QAZAP_CONFIG_PRICE_FILTER_TYPE_DESC" >
+			<option value="baseprice">COM_QAZAP_BASE_PRICE</option>
+			<option value="salesprice">COM_QAZAP_SALES_PRICE</option>
+		</field>
+	</fieldset>
+		
+	<fieldset 
+		name="product"
+		label="COM_QAZAP_CONFIG_LBL_PRODUCT"
+		description="COM_QAZAP_CONFIG_DESC_PRODUCT" >
+
+		<field
+			name="spacer10"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_DISPLAY_OPTIONS" />
+
+		<field
+			name="product_layout" 
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_qazap"
+			view="product" />
+		
+		<field 
+			name="product_approval" 
+			type="radio" 
+			default="1" 
+			class="btn-group btn-group-yesno"                
+			label="COM_QAZAP_CONFIG_LBL_PRODUCT_APPROVAL"
+			description="COM_QAZAP_CONFIG_DESC_PRODUCT_APPROVAL" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="show_inactive_vendor_products" 
+			type="radio" 
+			default="0" 
+			class="btn-group btn-group-yesno"                
+			label="COM_QAZAP_CONFIG_LBL_INACTIVE_VENDOR_PRODUCTS"
+			description="COM_QAZAP_CONFIG_DESC_INACTIVE_VENDOR_PRODUCTS" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field
+			name="show_quantity"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_SHOW_QUANTITY"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_QUANTITY" 
+			default="1" >
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="ask_seller"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_ASK_SELLER"
+			description="COM_QAZAP_CONFIG_DESC_ASK_SELLER" 
+			default="1" >
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>		
+
+		<field 
+			name="show_icon" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_SHOW_ICON"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_ICON" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+				
+		<field 
+			name="print_view_link" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_PRINT_VIEW_LINK"
+			description="COM_QAZAP_CONFIG_DESC_PRINT_VIEW_LINK" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field 
+			name="pdf_view_icon" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_PDF_VIEW_ICON"
+			description="COM_QAZAP_CONFIG_DESC_PDF_VIEW_ICON" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="email_icon" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_EMAIL_ICON"
+			description="COM_QAZAP_CONFIG_DESC_EMAIL_ICON" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_availability" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY"
+			description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="availability_day_info" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY_DAY_INFO"
+			description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY_DAY_INFO" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+	
+		<field 
+			name="in_stock_image" 
+			type="media"
+			directory="qazap"
+			default=""    
+			label="COM_QAZAP_LBL_IN_STOCK_IMAGE"
+			description="COM_QAZAP_DESC_IN_STOCK_IMAGE" >
+		</field>
+		
+		<field 
+			name="out_of_stock_image" 
+			type="media"
+			directory="qazap"
+			default=""    
+			label="COM_QAZAP_LBL_OUT_OF_STOCK_IMAGE"
+			description="COM_QAZAP_DESC_OUT_OF_STOCK_IMAGE" >
+		</field>
+		
+		<field 
+			name="show_stock" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_LBL_SHOW_PRODUCT_STOCK"
+			description="COM_QAZAP_DESC_SHOW_PRODUCT_STOCK" >
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>				
+		
+		<field 
+			name="show_manufacturer" 
+			type="radio"
+			class="btn-group btn-group-yesno"    
+			label="COM_QAZAP_CONFIG_LBL_SHOW_MANUFACTURER"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_MANUFACTURER" 
+			default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field 
+			name="show_seller" 
+			type="radio"
+			class="btn-group btn-group-yesno"    
+			label="COM_QAZAP_CONFIG_LBL_SHOW_SELLER"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_SELLER" 
+			default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_category_product" 
+			type="radio"
+			class="btn-group btn-group-yesno"    
+			label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY" 
+			default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_rating" 
+			type="radio"
+			class="btn-group btn-group-yesno"    
+			label="COM_QAZAP_CONFIG_LBL_SHOW_RATING"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_RATING" 
+			default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_link_category_product" 
+			type="radio"
+			class="btn-group btn-group-yesno"    
+			label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY_LINK"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY_LINK" 
+			default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="display_original_price"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_DISPLAY_ORIGINAL_PRICE_LBL"
+			description="COM_QAZAP_CONFIG_DISPLAY_ORIGINAL_PRICE_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="displayed_price"
+			type="list"
+			default="product_salesprice"    
+			label="COM_QAZAP_CONFIG_DISPLAYED_PRICE_LBL"
+			description="COM_QAZAP_CONFIG_DISPLAYED_PRICE_DESC" >
+			<option value="product_baseprice">COM_QAZAP_BASE_PRICE</option>
+			<option value="product_basepricewithVariants">COM_QAZAP_BASE_PRICE_WITH_VARIENTS</option>
+			<option value="product_dbt">COM_QAZAP_DISCOUNT_BEFORE_TAX</option>
+			<option value="product_basepriceBeforeTax">COM_QAZAP_BASE_PRICE_BEFORE_TAX</option>
+			<option value="product_basepriceAfterTax">COM_QAZAP_BASE_PRICE_AFTER_TAX</option>
+			<option value="product_dat">COM_QAZAP_DISCOUNT_AFTER_TAX</option>
+			<option value="product_discount">COM_QAZAP_TOTAL_DISCOUNT</option>
+			<option value="product_salespriceBeforeDiscount">COM_QAZAP_SALES_PRICE_BEFORE_DISCOUNT</option>
+			<option value="product_salesprice">COM_QAZAP_SALES_PRICE</option>
+		</field>
+										
+		<field
+			name="spacer3"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_ADD_TO_CART_OPTIONS" />
+			
+		<field 
+			name="low_stock_notification" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_LOW_STOCK_NOTIFICATION"
+			description="COM_QAZAP_CONFIG_DESC_LOW_STOCK_NOTIFICATION" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>			
+
+		<field 
+			name="minimum_purchase_quantity" 
+			type="text" 
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_MINIMUM_PURCHASE_QUANTITY"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_MINIMUM_PURCHASE_QUANTITY" 
+			filter="interger" />
+			
+		<field 
+			name="maximum_purchase_quantity" 
+			type="text" 
+			default="100"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_MAXIMUM_PURCHASE_QUANTITY"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_MAXIMUM_PURCHASE_QUANTITY" 
+			filter="interger" />
+			   
+		<field 
+			name="purchase_quantity_steps" 
+			type="text" 
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_PURCHASE_QUANTITY_STEPS"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_PURCHASE_QUANTITY_STEPS" 
+			filter="interger" />
+			
+		<field
+			name="stockout_action"
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_STOCKOUT_ACTION_LABEL"
+			description="COM_QAZAP_CONFIG_STOCKOUT_ACTION_DESC"
+			default="1" >
+				<option value="notify">COM_QAZAP_SHOW_NOTIFY_BUTTON</option>
+				<option value="hide">COM_QAZAP_HIDE_ADDTOCART_BUTTON</option>
+				<option value="hide_product">COM_QAZAP_HIDE_PRODUCT</option>
+				<option value="display">COM_QAZAP_DISPLAY_ADDTOCART_BUTTON</option>				
+		</field>		
+    
+		<field
+			name="contact_for_price"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_CONTACT_FOR_PRICE_LABEL"
+			description="COM_QAZAP_CONFIG_CONTACT_FOR_PRICE_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="spacer9"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_ATTRIBUTE_OPTIONS" />	
+      
+    <field
+			name="attribute_required"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_ATTRIBUTE_REQUIRED"
+			description="COM_QAZAP_CONFIG_DESC_ATTRIBUTE_REQUIRED"
+      default="1">
+			<option value="1">JYES</option>      
+			<option value="0">JNO</option>
+    </field>
+    
+    <field
+			name="attribute_default_select"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_ATTRIBUTE_DEFAULT_SELECT"
+			description="COM_QAZAP_CONFIG_DESC_ATTRIBUTE_DEFAULT_SELECT"
+      default="0">
+			<option value="1">JYES</option>      
+			<option value="0">JNO</option>
+    </field>
+				
+		<field
+			name="spacer4"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_PRODUCT_REVIEW_OPTIONS" />	
+		
+		<field
+			name="review_enabled"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_REVIEW_ENABLED_LBL"
+			description="COM_QAZAP_CONFIG_REVIEW_ENABLED_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+				
+		<field
+			name="new_review_approval"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_NEW_REVIEW_APPROVAL"
+			description="COM_QAZAP_CONFIG_DESC_NEW_REVIEW_APPROVAL" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="enable_captcha"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_ENABLE_CAPTCHA"
+			description="COM_QAZAP_CONFIG_DESC_ENABLE_CAPTCHA" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="spacer5"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_NOTIFY_OPTIONS" />		
+		
+		<field
+			name="notify_registered_only"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_NOTIFY_REGISTERED_USER"
+			description="COM_QAZAP_CONFIG_DESC_NOTIFY_REGISTERED_USER" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="notify_mail_activation"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_NOTIFY_MAIL_ACTIVATION"
+			description="COM_QAZAP_CONFIG_DESC_NOTIFY_MAIL_ACTIVATION" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="notify_multiple_users_mail"
+			type="list"
+			default="to"    
+			label="COM_QAZAP_CONFIG_LBL_NOTIFY_MULTIPLE_USERS_MAIL"
+			description="COM_QAZAP_CONFIG_DESC_NOTIFY_MULTIPLE_USERS_MAIL" >
+			<option value="to">COM_QAZAP_MAIL_ALL_TO</option>
+			<option value="cc">COM_QAZAP_MAIL_ALL_CC</option>
+			<option value="bcc">COM_QAZAP_MAIL_ALL_BCC</option>
+		</field>		
+
+		<field
+			name="spacer6"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_CONTACT_MAIL_OPTIONS" />	
+		
+		<field
+			name="contact_mail_registered_only"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_CONTACT_REGISTERED_USER"
+			description="COM_QAZAP_CONFIG_LBL_CONTACT_REGISTERED_USER" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="contact_mail_copy_admin"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_LBL_ASK_A_QUESTION_MAIL_TO_ADMIN"
+			description="COM_QAZAP_DESC_ASK_A_QUESTION_MAIL_TO_ADMIN" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="spacer12"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_WISHLIST_OPTIONS" />
+		
+		<field
+			name="wishlist_system"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_DISPLAY_WISHLIST"
+			description="COM_QAZAP_CONFIG_DESC_DISPLAY_WISHLIST" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		
+	</fieldset>
+		
+	<fieldset 
+		name="order"
+		label="COM_QAZAP_CONFIG_LBL_ORDER"
+		description="COM_QAZAP_CONFIG_DESC_ORDER" >	
+
+		<field 
+			name="ajax_addtocart" 
+			type="radio" 
+			class="btn-group btn-group-yesno"  
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_ALLOW_AJAX_ADDTOCART"
+			description="COM_QAZAP_CONFIG_DESC_ALLOW_AJAX_ADDTOCART" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option> 
+		</field>
+		
+		<field 
+			name="show_order_seller" 
+			type="radio" 
+			class="btn-group btn-group-yesno"  
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_SHOW_ORDER_SELLER"
+			description="COM_QAZAP_CONFIG_DESC_SHOW_ORDER_SELLER" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option> 
+		</field>
+
+		<field 
+			name="guest_checkout" 
+			type="radio" 
+			class="btn-group btn-group-yesno"  
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_ALLOW_GUEST_CHECKOUT"
+			description="COM_QAZAP_CONFIG_DESC_ALLOW_GUEST_CHECKOUT" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option> 
+		</field>
+		
+		<field 
+			name="tos_acceptance" 
+			type="radio" 
+			class="btn-group btn-group-yesno"  
+			default="1"
+			label="COM_QAZAP_CONFIG_LBL_TOS_ACCEPTANCE"
+			description="COM_QAZAP_CONFIG_DESC_TOS_ACCEPTANCE" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option> 
+		</field>		
+				
+		<field 
+			name="order_prefix" 
+			type="text" 
+			default="QAZAP"
+      label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_PREFIX"
+      description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_PREFIX" />
+	   
+		<field 
+			name="order_sufix" 
+			type="text" 
+			default="2014"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_SUFFIX"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_SUFFIX" />
+	   
+		<field 
+			name="order_start" 
+			type="text" 
+			default="1001"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_START"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_START"
+			filter="integer" />		
+       
+		<field 
+			name="default_order_status" 
+			type="orderstates" 
+			default="P" 
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_STATUS"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_STATUS" />
+				
+		<field 
+			name="order_states_invoice"
+			type="orderstates" 
+			multiple="multiple" 
+			default="X,C,U" 
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_STATUS_INVOICE"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_STATUS_INVOICE"/>
+		
+		<field 
+			name="order_states_shopperemail" 
+			type="orderstates" multiple="multiple" 
+			default="P,S,R,X,C,U" 
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_STATUS_SHOPPEREMAIL"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_STATUS_SHOPPEREMAIL"/>
+		
+		<field 
+			name="order_states_vendoremail" 
+			type="orderstates" 
+			multiple="multiple" 
+			default="R,X,C,U" 
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_STATUS_VENDOREMAIL"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_STATUS_VENDOREMAIL" />
+		
+		<field 
+			name="send_mail_to_admin" 
+			type="orderstates" 
+			multiple="multiple" 
+			default="R,X,C,U" 
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_SEND_MAIL_TO_ADMIN"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_SEND_MAIL_TO_ADMIN"/>
+
+	</fieldset>
+
+	<fieldset 
+		name="brands"
+		label="COM_QAZAP_CONFIG_LBL_BRANDS"
+		description="COM_QAZAP_CONFIG_DESC_BRANDS" >
+		
+		<field 
+			name="brands_per_row" 
+			type="text" 
+			default="4" 
+			label="COM_QAZAP_CONFIG_LBL_BRANDS_PER_ROW"
+			description="COM_QAZAP_CONFIG_DESC_BRANDS_PER_ROW"
+			filter="integer" />
+			
+		<field 
+			name="brands_link_page" 
+			type="list" 
+			default="1" 
+			label="COM_QAZAP_CONFIG_LBL_BRAND_LINK_PAGE"
+			description="COM_QAZAP_CONFIG_DESC_BRAND_LINK_PAGE">
+			<option value="1">COM_QAZAP_BRAND_DETAILS_PAGE</option>
+			<option value="2">COM_QAZAP_BRAND_PRODUCTS_PAGE</option>
+		</field>
+	
+	</fieldset>	
+	
+	<fieldset 
+		name="membership"
+		label="COM_QAZAP_CONFIG_LBL_MEMBERSHIP"
+		description="COM_QAZAP_CONFIG_DESC_MEMBERSHIP" >
+
+		<field
+			name="spacer7"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_MEMBERSHIP_SETTINGS" />	    
+    
+		<field 
+			name="membership_process" 
+			type="radio"
+			default="join"
+			class="btn-group btn-group-yesno"                
+			label="COM_QAZAP_CONFIG_LBL_MEMBERSHIP_PROCESS"
+			description="COM_QAZAP_CONFIG_DESC_MEMBERSHIP_PROCESS" >
+			<option value="join">COM_QAZAP_JOIN</option>			
+			<option value="renew">COM_QAZAP_RENEW</option>
+		</field>
+		
+		<field 
+			name="order_states_membership_activation"
+			type="orderstates"
+			default="C"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_STATUS_MEMBERSHIP_ACTIVATION"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_STATUS_MEMBERSHIP_ACTIVATION" />
+
+		<field 
+			name="order_states_membership_expiration"
+			type="orderstates" 
+			multiple="multiple"
+			default="P,R,X,D"
+			label="COM_QAZAP_CONFIG_LBL_DEFAULT_ORDER_STATUS_MEMBERSHIP_EXPIRY"
+			description="COM_QAZAP_CONFIG_DESC_DEFAULT_ORDER_STATUS_MEMBERSHIP_EXPIRY" />		
+		
+		<field 
+			name="first_notification_time" 
+			type="text"
+			label="COM_QAZAP_CONFIG_FIRST_NOTIFICATION_DAYS_label"
+			description="COM_QAZAP_CONFIG_FIRST_NOTIFICATION_DAYS_DESC"
+			default="576" 
+			filter="integer" />
+		
+		<field 
+			name="second_notification_time" 
+			type="text"
+			label="COM_QAZAP_CONFIG_SECOND_NOTIFICATION_DAYS_LABEL"
+			description="COM_QAZAP_CONFIG_SECOND_NOTIFICATION_DAYS_DESC"
+			default="30" 
+			filter="integer" />
+		
+		<field 
+			name="non_member_redirection_url" 
+			type="text"
+			label="COM_QAZAP_CONFIG_NON_MEMBER_REDIRECTION_URL_LABEL"
+			description="COM_QAZAP_CONFIG_NON_MEMBER_REDIRECTION_URL_DESC" />
+
+		<field
+			name="spacer8"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_MEMBERSHIP_DISPLAY_OPTIONS" />	
+      
+    <field
+			name="membership_required"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_MEMBERSHIP_REQUIRED"
+			description="COM_QAZAP_CONFIG_DESC_MEMBERSHIP_REQUIRED"
+      default="1">
+			<option value="1">JYES</option>      
+			<option value="0">JNO</option>
+    </field>
+    
+    <field
+			name="membership_hidden"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_MEMBERSHIP_HIDDEN"
+			description="COM_QAZAP_CONFIG_DESC_MEMBERSHIP_HIDDEN"
+      default="0">
+			<option value="1">JYES</option>      
+			<option value="0">JNO</option>
+    </field> 
+    
+    <field
+			name="membership_show_select"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_LBL_MEMBERSHIP_SHOW_SELECT"
+			description="COM_QAZAP_CONFIG_DESC_MEMBERSHIP_SHOW_SELECT"
+      default="1">
+			<option value="1">JYES</option>      
+			<option value="0">JNO</option>
+    </field>
+
+		<field
+			name="spacer9"
+			type="spacer"
+			class="uppercase"
+			label="COM_QAZAP_CONFIG_MEMBERSHIP_MAILING_SETTINGS" />	
+		
+		<field 
+			name="new_member_mail_to_admin" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_SEND_NEW_MEMBER_MAIL_TO_ADMIN_LABEL"
+			description="COM_QAZAP_CONFIG_SEND_NEW_MEMBER_MAIL_TO_ADMIN_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="member_update_mail_to_admin" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_MEMBER_UPDATE_MAIL_TO_ADMIN"
+			description="COM_QAZAP_CONFIG_DESC_MEMBER_UPDATE_MAIL_TO_ADMIN" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>		
+		
+		<field 
+			name="member_notify_mail_to_admin" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_SEND_NOTIFY_MAIL_TO_ADMIN_LABEL"
+			description="COM_QAZAP_CONFIG_SEND_NOTIFY_MAIL_TO_ADMIN_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+			
+		<field 
+			name="member_expiration_mail_to_admin" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_SEND_EXPIRATION_MAIL_TO_ADMIN_LABEL"
+			description="COM_QAZAP_CONFIG_SEND_EXPIRATION_MAIL_TO_ADMIN_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+	</fieldset>	
+
+	<fieldset 
+		name="compareProduct"
+		label="COM_QAZAP_CONFIG_LBL_COMPARE_PRODUCTS"
+		description="COM_QAZAP_CONFIG_DESC_COMPARE_PRODUCTS" >
+		
+		<field 
+			name="compare_system" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_COMPARE_SYSTEM_LABEL"
+			description="COM_QAZAP_CONFIG_COMPARE_SYSTEM_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field 
+			name="compare_add_redirect" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_REDIRECT_URL_ON_COMPARE"
+			description="COM_QAZAP_CONFIG_DESC_REDIRECT_URL_ON_COMPARE" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field 
+			name="sef_compare_page" 
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"    
+			label="COM_QAZAP_CONFIG_LBL_SEF_URL"
+			description="COM_QAZAP_CONFIG_DESC_SEF_URL" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="compare_product_number" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LBL_LIST_COMPARE_PRODUCT_LIMIT"
+			description="COM_QAZAP_CONFIG_DESC_LIST_COMPARE_PRODUCT_LIMIT"
+			filter="integer"
+			default="2" />
+
+		<field 
+			name="display_fields"
+			type="QazapProductObject" 
+			multiple="multiple"
+			label="COM_QAZAP_CONFIG_LBL_DISPLAY_PRODUCT_ATTRIBUTES_IN_COMPARE"
+			description="COM_QAZAP_CONFIG_DESC_DISPLAY_PRODUCT_ATTRIBUTES_IN_COMPARE" />
+		
+		<field 
+			name="display_no_title_fields"
+			type="QazapProductObject" 
+			multiple="multiple"
+			label="COM_QAZAP_CONFIG_LBL_DISPLAY_NO_TITLE_FIELDS_IN_COMPARE"
+			description="COM_QAZAP_CONFIG_DESC_DISPLAY_NO_TITLE_FIELDS_IN_COMPARE" />
+
+		<field 
+			name="position_of_addtocart_button"
+			type="QazapProductObject"
+			default="product_name" 
+			label="COM_QAZAP_CONFIG_LBL_POSITION_OF_ADDTOCART_BUTTON"
+			description="COM_QAZAP_CONFIG_DESC_POSITION_OF_ADDTOCART_BUTTON" />
+
+	
+	</fieldset>
+	
+	<fieldset 
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC" >
+		
+		<field 
+			name="rules" 
+			type="rules"
+			component="com_qazap"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	
+	</fieldset>
+
+
+</config>

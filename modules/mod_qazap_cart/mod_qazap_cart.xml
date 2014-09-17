@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Qazap Cart</name>
+	<author>Qazap Team</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>Copyright (C) 2014 VirtuePlanet Services LLP. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@qazap.com</authorEmail>
+	<authorUrl>www.qazap.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Cart Module for Qazap.</description>
+	<files>
+		<filename module="mod_qazap_cart">mod_qazap_cart.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_qazap_cart.xml</filename>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_qazap_cart.ini</language>
+		<language tag="en-GB">en-GB.mod_qazap_cart.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+		<fieldset name="advanced">
+			<field name="layout" type="modulelayout"
+				label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			<field name="item_heading" type="list" default="4"
+				label="MOD_QAZAP_CART_TITLE_HEADING_LABEL"
+				description="MOD_QAZAP_CART_TITLE_HEADING_DESC" >
+				<option value="1">JH1</option>
+				<option value="2">JH2</option>
+				<option value="3">JH3</option>
+				<option value="4">JH4</option>
+				<option value="5">JH5</option>
+			</field>
+
+			<field name="moduleclass_sfx" type="textarea" rows="3"
+				label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+			<field name="owncache" type="hidden" default="0" />
+		</fieldset>
+	</fields>
+	</config>
+</extension>

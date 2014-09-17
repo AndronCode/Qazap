@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.3" method="upgrade">
+	<name>com_qazap</name>
+	<author>Qazap Team</author>
+	<creationDate>September 2014</creationDate>
+	<copyright>Copyright (C) 2014 VirtuePlanet Services LLP. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>VirtuePlanet Services LLP</author>
+	<authorEmail>support@qazap.com</authorEmail>
+	<authorUrl>http://www.qazap.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Qazap is a free open source eCommerce component for Joomla!</description>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<scriptfile>install.qazap.php</scriptfile>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>frontend.zip</filename>
+		<filename>all_modules.zip</filename>
+		<filename>all_plugins.zip</filename>
+	</files>
+	<languages folder="languages">        
+		<language tag="en-GB">site/en-GB.com_qazap.ini</language>
+		<language tag="en-GB">site/en-GB.com_qazap.sef.ini</language>
+	</languages>
+	<media folder="media" destination="com_qazap">
+		<filename>index.html</filename>
+		<filename>no-image.jpg</filename>
+		<folder>files</folder>
+	</media>	
+	<administration>
+		<menu view="qazap" img="components/com_qazap/assets/images/qazap-favicon.png" >COM_QAZAP</menu>
+    <files folder="admin">
+        <filename>access.xml</filename>
+        <filename>app.php</filename>
+        <filename>backend.zip</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>installer.hash.ini</filename>
+        <filename>install.qazap.php</filename>
+        <filename>qazap.php</filename>
+        <folder>assets</folder>
+        <folder>controllers</folder> 
+        <folder>sql</folder>                       
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+		<languages folder="languages">            
+			<language tag="en-GB">admin/en-GB.com_qazap.ini</language>
+			<language tag="en-GB">admin/en-GB.com_qazap.sys.ini</language>
+			<language tag="en-GB">admin/en-GB.com_qazap.instl.ini</language>
+		</languages>
+	</administration>
+</extension>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="id" 
+			type="text" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field 
+			name="type" 
+			type="customfieldtypes"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_TYPE"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_TYPE"                 
+			required="true"
+			multiple="false"/>
+		
+		<field 
+			name="title" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_TITLE"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_TITLE" 
+			required="true"
+			hint="Enter Field Type Name"
+			class="input-xxlarge input-large-text" 
+			filter="raw" /> 
+
+		<field 
+			name="show_title" 
+			type="radio" 
+			class="btn-group btn-group-yesno" 
+			default="1"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_SHOW_TITLE"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_SHOW_TITLE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field 
+			name="description" 
+			type="editor"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_DESCRIPTION"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_DESCRIPTION" 
+			cols="100"
+			rows="8" 
+			filter="JComponentHelper::filterText"/> 
+
+		<field 
+			name="tooltip" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_TOOLTIP"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_TOOLTIP"/> 
+
+		<field 
+			name="layout_position" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_LAYOUT_POSITION"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_LAYOUT_POSITION"/> 
+
+		<field 
+			name="hidden" 
+			type="radio" 
+			class="btn-group btn-group-yesno" 
+			default="0"
+			label="COM_QAZAP_FORM_LBL_CUSTOMFIELDTYPE_HIDDEN"
+			description="COM_QAZAP_FORM_DESC_CUSTOMFIELDTYPE_HIDDEN">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field> 
+
+		<field 
+			name="params" 
+			type="hidden" /> 
+
+		<field
+			name="state"
+			type="list" 
+			class="chzn-color-state"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+<field 
+			name="created_by" 
+			type="user" 
+			label="COM_QAZAP_FORM_LBL_CUSTOM_FIELD_TYPE_CREATED_BY"
+			description="COM_QAZAP_FORM_DESC_CUSTOM_FIELD_TYPE_CREATED_BY"  />
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+
+	</fieldset>
+
+</form>

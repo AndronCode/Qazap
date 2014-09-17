@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_CATEGORIES_ITEMS_SEARCH_FILTER"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="state"
+			type="list"
+			label="COM_QAZAP_FILTER_PUBLISHED"
+			description="COM_CQAZAP_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="*">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">COM_QAZAP_FILTER_PUBLISHED</option>
+			<option value="0">COM_QAZAP_FILTER_UNPUBLISHED</option>
+			<option value="-2">COM_QAZAP_FILTER_TRASH</option>
+		</field>
+				
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.ordering ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.id ASC">COM_QAZAP_COUNTRIES_ID_ASCENDING</option>
+			<option value="a.id DESC">COM_QAZAP_COUNTRIES_ID_DESCENDING</option>			
+			<option value="a.country_name ASC">COM_QAZAP_COUNTRIES_COUNTRY_NAME_ASCENDING</option>
+			<option value="a.country_name DESC">COM_QAZAP_COUNTRIES_COUNTRY_NAME_DESCENDING</option>
+			<option value="a.country_3_code ASC">COM_QAZAP_COUNTRIES_COUNTRY3CODE_ASCENDING</option>
+			<option value="a.country_3_code DESC">COM_QAZAP_COUNTRIES_COUNTRY3CODE_DESCENDING</option>
+			<option value="a.country_2_code ASC">COM_QAZAP_COUNTRIES_COUNTRY2CODE_ASCENDING</option>
+			<option value="a.country_2_code DESC">COM_QAZAP_COUNTRIES_COUNTRY2CODE_DESCENDING</option>
+			<option value="a.ordering ASC">COM_QAZAP_COUNTRIES_ORDERING_ASCENDING</option>
+			<option value="a.ordering DESC">COM_QAZAP_COUNTRIES_ORDERING_DESCENDING</option>	
+			<option value="a.state ASC">COM_QAZAP_COUNTRIES_STATUS_ASCENDING</option>
+			<option value="a.state DESC">COM_QAZAP_COUNTRIES_STATUS_DESCENDING</option>		
+			
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CATEGORIES_LIST_LIMIT"
+			description="COM_CATEGORIES_LIST_LIMIT_DESC"
+			format="%Y-%m-%d %H:%M:%S"
+			onchange="this.form.submit();"
+		/>		
+	</fields>
+</form>

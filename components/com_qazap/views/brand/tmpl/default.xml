@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QAZAP_BRAND_VIEW_DEFAULT_TITLE" option="COM_QAZAP_BRAND_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_QAZAP_BRAND_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset 
+			name="request"
+			addfieldpath="/administrator/components/com_qazap/models/fields">
+
+			<field name="brand_id" 
+				type="modal_brand"
+				label="COM_QAZAP_FIELD_SELECT_BRAND_LABEL"
+				required="true"
+				edit="true"
+				clear="false"
+				description="COM_QAZAP_FIELD_SELECT_BRAND_DESC" />				
+				
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="id" 
+			type="text" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_TAX_ID"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+		
+		<field 
+			name="calculation_rule_name" 
+			type="text" 
+			required="required"
+			label="COM_QAZAP_FORM_LBL_TAX_CALCULATION_RULE_NAME"
+			description="COM_QAZAP_FORM_DESC_TAX_CALCULATION_RULE_NAME"
+			class="input-xxlarge input-large-text"
+			hint="Enter Calculation Rule Name"
+			filter="raw" /> 
+
+		<field 
+			name="description" 
+			type="textarea"
+			label="COM_QAZAP_FORM_LBL_TAX_DESCRIPTION"
+			description="COM_QAZAP_FORM_DESC_TAX_DESCRIPTION" 
+			class="span12"
+			filter="JComponentHelper::filterText" /> 
+      
+		<field 
+			name="type_of_arithmatic_operation" 
+			type="list"
+			label="COM_QAZAP_FORM_LBL_TAX_TYPE_OF_ARITHMATIC_OPERATION"
+			description="COM_QAZAP_FORM_DESC_TAX_TYPE_OF_ARITHMATIC_OPERATION" 
+			filter="raw">
+				<option value="1">COM_QAZAP_DISCOUNT_AFTER_TAX</option>
+				<option value="2">COM_QAZAP_DISCOUNT_BEFORE_TAX</option>
+				<option value="3">COM_QAZAP_TAX</option>
+				<option value="4">COM_QAZAP_ORDER_DISCOUNT_AFTER_TAX</option>
+				<option value="5">COM_QAZAP_ORDER_DISCOUNT_BEFORE_TAX</option>
+				<option value="6">COM_QAZAP_ORDER_TAX</option>
+		</field> 
+       
+		<field 
+			name="math_operation" 
+			type="list"
+			label="COM_QAZAP_FORM_LBL_TAX_MATH_OPERATION"
+			description="COM_QAZAP_FORM_DESC_TAX_MATH_OPERATION" 
+			filter="raw">
+				<option value="value">COM_QAZAP_FORM_TAX_DISCOUNT_VALUE</option>
+				<option value="percent">COM_QAZAP_FORM_TAX_DISCOUNT_PERCENTAGE</option>
+		</field> 
+       
+		<field 
+			name="value" 
+			type="text" 
+			required="true"
+			label="COM_QAZAP_FORM_LBL_TAX_VALUE"
+			description="COM_QAZAP_FORM_DESC_TAX_VALUE" 
+			filter="raw" /> 
+		
+		<field 
+			name="countries" 
+			type="qazapcountries" 
+			multiple="multiple"       
+			label="COM_QAZAP_FORM_LBL_COUNTRIES"
+			description="COM_QAZAP_FORM_DESC_COUNTRIES" 
+			default=""/>
+
+		<field 
+			name="zipcodes" 
+			type="textfield"         
+			label="COM_QAZAP_FORM_LBL_ZIP_CODES"
+			description="COM_QAZAP_FORM_DESC_ZIP_CODES" />
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field
+			name="created_by"
+			type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL"
+			desc="JGLOBAL_FIELD_CREATED_BY_DESC" />
+
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />		
+
+	</fieldset>
+
+</form>

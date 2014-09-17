@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field
+			name="id"
+			type="text" 
+			default="0" label="COM_QAZAP_FORM_LBL_COUPON_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field
+			name="coupon_code" 
+			type="text"
+			class="input-xxlarge input-large-text"
+			hint="Enter Coupon Code"
+			label="COM_QAZAP_FORM_LBL_COUPON_COUPON_CODE"
+			description="COM_QAZAP_FORM_DESC_COUPON_COUPON_CODE" 
+			required="true" 
+			filter="raw" /> 
+
+		<field 
+			name="math_operation"
+			type="list"
+			label="COM_QAZAP_FORM_LBL_COUPON_MATH_OPERATION"
+			description="COM_QAZAP_FORM_DESC_COUPON_MATH_OPERATION" 
+			filter="raw">
+				<option value="p">COM_QAZAP_PERCENT</option>
+				<option value="v">COM_QAZAP_VALUE</option> 
+		</field> 
+
+		<field 
+			name="coupon_value"
+			type="text"
+			label="COM_QAZAP_FORM_LBL_COUPON_COUPON_VALUE"
+			description="COM_QAZAP_FORM_DESC_COUPON_COUPON_VALUE" 
+			required="true" 
+			filter="raw" />
+		
+		<field 
+			name="coupon_usage_type"
+			type="list"
+			label="COM_QAZAP_FORM_LBL_COUPON_USAGE_TYPE"
+			description="COM_QAZAP_FORM_DESC_COUPON_USAGE_TYPE" 
+			filter="raw">
+				<option value="nl">COM_QAZAP_UNLIMITED_ACCESS</option>
+				<option value="ul">COM_QAZAP_USER_SPECIFIC_ACCESS</option> 
+				<option value="ol">COM_QAZAP_USER_OVERALL_ACCESS</option>
+		</field>
+		
+		<field 
+			name="coupon_usage_limit"
+			type="text"
+			label="COM_QAZAP_FORM_LBL_COUPON_USAGE_LIMIT"
+			description="COM_QAZAP_FORM_DESC_COUPON_USAGE_LIMIT" 
+			filter="raw" />
+
+		<field 
+			name="coupon_start_date" 
+			type="calendar"
+			default="NOW"
+			format="%Y-%m-%d %H:%M:%S"
+			label="COM_QAZAP_FORM_LBL_COUPON_COUPON_START_DATE"
+			description="COM_QAZAP_FORM_DESC_COUPON_COUPON_START_DATE" 
+			filter="raw" /> 
+
+		<field 
+			name="coupon_expiry_date"
+			type="calendar"
+			format="%Y-%m-%d %H:%M:%S"
+			label="COM_QAZAP_FORM_LBL_COUPON_COUPON_EXPIRY_DATE"
+			description="COM_QAZAP_FORM_DESC_COUPON_COUPON_EXPIRY_DATE" 
+			filter="raw" /> 
+
+		<field 
+			name="min_order_amount"
+			type="text"
+			label="COM_QAZAP_FORM_LBL_MIN_ORDER_AMOUNT"
+			description="COM_QAZAP_FORM_DESC_MIN_ORDER_AMOUNT" 
+			required="true" 
+			filter="raw" />
+		
+		<field 
+			name="categories"
+			type="qazapcategories"
+			multiple="true"
+			label="COM_QAZAP_FORM_LBL_PRODUCT_CATEGORIES"
+			default="0"
+			description="COM_QAZAP_FORM_DESC_PRODUCT_CATEGORIES" filter="array">
+				<option value="0">JALL</option>
+		</field>
+			
+		<field 
+			name="created_by" 
+			type="user" 
+			label="JGLOBAL_CREATED_BY_LABEL"
+			description="JGLOBAL_CREATED_BY_DESC"  />
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="countUsage"
+			type="text"
+			label="COM_QAZAP_COUPON_USAGE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+		
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+	</fieldset>
+
+</form>

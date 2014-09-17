@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QAZAP_CATEGORIES_VIEW_DEFAULT_TITLE" option="COM_QAZAP_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_QAZAP_CATEGORIES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_qazap/models/fields" >
+			<field name="category_id" type="qazapcategories"
+				description="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_DESC"
+				label="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_LABEL"
+				action="true"
+				show_root="true"
+				required="true" />
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+<fields name="params">
+<fieldset 
+	name="basic" 
+	label="COM_QAZAP_CONFIG_LBL_CATEGORIES">
+	
+		<field
+			name="category_layout" 
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_qazap"
+			view="category" />
+		
+		<field 
+			name="show_category_description_cat" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_BASE_DESCRIPTION_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_BASE_DESCRIPTION_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="show_category_image_cat" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_BASE_IMAGE_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_BASE_IMAGE_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>		
+
+		<field
+			name="subcategories_per_row_cat"
+			type="list"
+			label="COM_QAZAP_LBL_CONFIG_SUBCATEGORIES_PER_ROW_CAT"
+			description="COM_QAZAP_DESC_CONFIG_SUBCATEGORIES_PER_ROW_CAT">	
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>			
+
+		<field 
+			name="maxLevelcat" 
+			type="list"
+			description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL" 
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="-1">JALL</option>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+		</field>
+
+		<field 
+			name="show_empty_categories_cat" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+			description="COM_CONTENT_SHOW_EMPTY_CATEGORIES_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+
+		<field 
+			name="show_subcat_image_cat" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_LABEL"
+			description="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_DESC" 
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+
+		<field 
+			name="show_cat_num_products_cat" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_NUMBER_CATEGORY_ITEMS_LABEL"
+			description="COM_QAZAP_NUMBER_CATEGORY_ITEMS_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="spacer2"
+			type="spacer"
+			hr="true"/>		
+				
+		<field 
+			name="show_latest_products" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_LATEST_PRODUCTS_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="latest_products_per_row" 
+			type="list"
+			label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_PER_ROW_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		
+		</field>
+			
+		<field 
+			name="latest_products_limit" 
+			type="list"
+			label="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_LATEST_PRODUCTS_LIMIT_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>
+			
+		<field 
+			name="show_featured_products" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_FEATURED_PRODUCTS_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="featured_products_per_row" 
+			type="list"
+			label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_PER_ROW_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>
+			
+		<field 
+			name="featured_products_limit" 
+			type="list"
+			label="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_FEATURED_PRODUCTS_LIMIT_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+		<field 
+			name="show_random_products" 
+			type="list"
+			label="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_RANDOM_PRODUCTS_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="random_products_per_row" 
+			type="list"
+			label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_PER_ROW_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>
+			
+		<field 
+			name="random_products_limit" 
+			type="list"
+			label="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_RANDOM_PRODUCTS_LIMIT_DESC"
+			default="">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>	
+			
+		<field 
+			name="show_topselling_products" 
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_TOP_SELLING_PRODUCTS_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>			
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field 
+			name="topselling_products_per_row" 
+			type="list"
+			label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_LABEL"
+			description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_PER_ROW_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>
+			
+		<field 
+			name="topselling_products_limit" 
+			type="list"
+			label="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_LABEL"
+			description="COM_QAZAP_CONFIG_TOP_SELLING_PRODUCTS_LIMIT_DESC"
+			default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+		</field>
+
+
+</fieldset>
+
+<fieldset 
+	name="category" 
+	label="JGLOBAL_CATEGORY_OPTIONS">
+	
+			<field name="spacer3" type="spacer" class="text"
+			label="JGLOBAL_SUBSLIDER_DRILL_CATEGORIES_LABEL" />
+		
+			<field
+				name="category_layout" 
+				type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL"
+				description="JGLOBAL_FIELD_LAYOUT_DESC"
+				menuitems="true"
+				extension="com_qazap"
+				view="category" />			
+
+			<field 
+				name="show_category_title" 
+				type="list"
+				
+				label="JGLOBAL_SHOW_CATEGORY_TITLE"
+				description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+				default="1">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field 
+				name="show_category_description" 
+				type="list"
+				
+				label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+				description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>			
+			</field>			
+			
+			<field 
+				name="show_category_image" 
+				type="list"
+				
+				label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+				description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>	
+								
+			<field 
+				name="display_subcategories"
+				type="list"
+				
+	 			label="COM_QAZAP_LBL_DISPLAY_SUBCATEGORIES"
+				description="COM_QAZAP_DESC_DISPLAY_SUBCATEGORIES"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>			
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field
+				name="subcategories_per_row"
+				type="list"
+				label="COM_QAZAP_LBL_SUBCATEGORIES_PER_ROW"
+				description="COM_QAZAP_DESC_SUBCATEGORIES_PER_ROW"
+				default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>			
+			
+			<field name="show_subcategory_title"
+				type="list"
+				label="COM_QAZAP_LBL_SUBCATEGORIES_TITLE_LABEL"
+				description="COM_QAZAP_LBL_SUBCATEGORIES_TITLE_DESC"
+				default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+			</field>
+
+			<field name="show_subcategory_image"
+				type="list"
+				default=""
+				label="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_LABEL"
+				description="COM_QAZAP_SHOW_SUBCATEGORIES_IMAGE_DESC">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+			</field>
+			
+			<field name="show_subcategory_num_products"
+				type="list"
+				label="COM_QAZAP_CONFIG_SUBCATEGORY_ITEMS_LABEL"
+				description="COM_QAZAP_CONFIG_SUBCATEGORY_ITEMS_DESC"
+				default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>		
+
+			<field name="show_empty_subcategories"
+				type="list"
+				label="COM_QAZAP_CONFIG_SHOW_EMPTY_SUBCATEGORIES_LABEL"
+				description="COM_QAZAP_CONFIG_SHOW_EMPTY_SUBCATEGORIES_DESC"
+				default="" >
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+
+			<field name="show_no_products"
+				type="list"
+				label="COM_QAZAP_CONFIG_LBL_SHOW_NO_PRODUCTS"
+				description="COM_QAZAP_CONFIG_DESC_SHOW_NO_PRODUCTS"
+				default="" >
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+
+</fieldset>
+<fieldset name="product_list" label="COM_QAZAP_PRODUCT_LIST_FIELDSET_LABEL">
+				<field name="spacer4" type="spacer" class="text"
+				label="COM_QAZAP_PRODUCT_LIST_FIELDSET_DESC"
+			/>
+
+		<field name="categories_as_filter"
+			type="list"
+			label="COM_QAZAP_CONFIG_LBL_USE_CATEGORIES_AS_FILTER"
+			description="COM_QAZAP_CONFIG_DESC_USE_CATEGORIES_AS_FILTER"
+			default="" >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="products_per_row" 
+			type="text"
+			label="COM_QAZAP_LBL_PRODUCTS_PER_ROW"
+			description="COM_QAZAP_DESC_PRODUCTS_PER_ROW"
+			default=""
+			hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER" />
+			
+		<field name="product_list_limit" 
+			type="text"
+			label="COM_QAZAP_CONFIG_LBL_LIST_LIMIT"
+			description="COM_QAZAP_CONFIG_DESC_LIST_LIMIT"
+			hint="COM_QAZAP_CONFIG_USE_GLOBAL_PLACEHOLDER"
+			default="" />		
+			
+		<field
+			name="product_ordering"
+			type="qazapproductorder"
+			label="COM_QAZAP_LBL_PRODUCT_DISPLAY_ORDER"
+			description="COM_QAZAP_DESC_PRODUCT_DISPLAY_ORDER"
+			default="" >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+		</field>	
+			
+		<field
+			name="product_order_dir"
+			type="list"
+			label="COM_QAZAP_LBL_PRODUCT_DISPLAY_DIR"				
+			description="COM_QAZAP_DESC_PRODUCT_DISPLAY_DIR" 
+			default="">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+			<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+		</field>
+
+		<field
+			name="product_sorting"
+			type="list"
+			label="COM_QAZAP_CONFIG_LBL_PRODUCT_SORTING"
+			description="COM_QAZAP_CONFIG_LBL_PRODUCT_SORTING" 
+			default="" >	
+				<option value="">JGLOBAL_USE_GLOBAL</option> 
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>			
+		
+		<field
+			name="show_add_to_cart_productlist"
+			type="list"
+			label="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_ADDTOCART_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_ADDTOCART_DESC" 
+			default="" >
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="show_short_description_productlist"
+			type="list"
+			class="btn-group btn-group-yesno"
+			label="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_SHORT_DESCRIPTION_LABEL"
+			description="COM_QAZAP_CONFIG_SHOW_PRODUCTLIST_SHORT_DESCRIPTION_DESC" 
+			default="" >
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+		</field>
+		
+		<field
+			name="price_filter_type"
+			type="list"
+			default=""    
+			label="COM_QAZAP_CONFIG_PRICE_FILTER_TYPE_LBL"
+			description="COM_QAZAP_CONFIG_PRICE_FILTER_TYPE_DESC" >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="baseprice">COM_QAZAP_BASE_PRICE</option>
+			<option value="salesprice">COM_QAZAP_SALES_PRICE</option>
+		</field>
+
+
+</fieldset>
+
+
+	<fieldset 
+		name="product" 
+		label="COM_QAZAP_PRODUCT_PARAMS_FIELDSET_LABEL">
+				<field
+					name="product_layout" 
+					type="componentlayout"
+					label="JGLOBAL_FIELD_LAYOUT_LABEL"
+					description="JGLOBAL_FIELD_LAYOUT_DESC"
+					menuitems="true"
+					useglobal="true"
+					extension="com_qazap"
+					view="product" />
+
+				<field 
+					name="show_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_SHOW_ICON"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+											
+				<field 
+					name="print_view_link" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_PRINT_VIEW_LINK"
+					description="COM_QAZAP_CONFIG_DESC_PRINT_VIEW_LINK" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field 
+					name="pdf_view_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_PDF_VIEW_ICON"
+					description="COM_QAZAP_CONFIG_DESC_PDF_VIEW_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="email_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_EMAIL_ICON"
+					description="COM_QAZAP_CONFIG_DESC_EMAIL_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_availablity" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="availability_day_info" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY_DAY_INFO"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY_DAY_INFO" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field 
+					name="show_stock" 
+					type="list"
+					class="btn-group btn-group-yesno"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_STOCK"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_STOCK" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>				
+				
+				<field 
+					name="show_manufacturer" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_MANUFACTURER"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_MANUFACTURER" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_category_product" 
+					type="list"   
+					label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_link_category_product" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY_LINK"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY_LINK" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="display_original_price"
+					type="list"
+					class="btn-group btn-group-yesno"
+					default=""    
+					label="COM_QAZAP_CONFIG_DISPLAY_ORIGINAL_PRICE_LBL"
+					description="COM_QAZAP_CONFIG_DISPLAY_ORIGINAL_PRICE_DESC" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+		
+				<field
+					name="displayed_price"
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_DISPLAYED_PRICE_LBL"
+					description="COM_QAZAP_CONFIG_DISPLAYED_PRICE_DESC" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="product_baseprice">COM_QAZAP_BASE_PRICE</option>
+					<option value="product_basepricewithVariants">COM_QAZAP_BASE_PRICE_WITH_VARIENTS</option>
+					<option value="product_dbt">COM_QAZAP_DISCOUNT_BEFORE_TAX</option>
+					<option value="product_basepriceBeforeTax">COM_QAZAP_BASE_PRICE_BEFORE_TAX</option>
+					<option value="product_basepriceAfterTax">COM_QAZAP_BASE_PRICE_AFTER_TAX</option>
+					<option value="product_dat">COM_QAZAP_DISCOUNT_AFTER_TAX</option>
+					<option value="product_discount">COM_QAZAP_TOTAL_DISCOUNT</option>
+					<option value="product_salespriceBeforeDiscount">COM_QAZAP_SALES_PRICE_BEFORE_DISCOUNT</option>
+					<option value="product_salesprice">COM_QAZAP_SALES_PRICE</option>
+				</field>
+	</fieldset>
+</fields>
+</metadata>

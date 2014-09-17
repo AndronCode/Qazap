@@ -1,0 +1,72 @@
+/**
+ * module.css
+ *
+ * LICENSE: Qazap is a free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is 
+ * derivative of works licensed under the GNU General Public License or other free
+ * or open source software licenses.
+ *
+ * @package    Qazap
+ * @subpackage Qazap Cart Module
+ * @author     Abhishek Das <abhishek@virtueplanet.com>
+ * @copyright  Copyright (C) 2014. VirtuePlanet Services LLP. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @version    SVN: $Id$
+ * @link       http://www.qazap.com/download
+ * @since      File available since Release 1.0.0
+ */
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.product-inner {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 10px;	
+}
+.product-image {
+	width: 25%;
+	padding: 0;
+	margin: 0;	
+	float: left;
+}
+.product-details {
+	width: 75%;
+	padding: 0;
+	margin: 0;	
+	float: left;
+}
+.product-image img {
+	padding: 2px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	width: auto\9;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
+}
+.product-details .inner {
+	padding-left: 15px;
+}
+.cart-module-checkout {
+	padding: 5px 0;
+	margin: 10px 0;
+}
+.cart-module-product-count {
+	margin-top: 5px;
+}

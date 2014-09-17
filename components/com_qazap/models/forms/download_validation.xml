@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<field 
+		name="download_id"
+		type="text"
+		label="COM_QAZAP_DOWNLOAD_ID_LBL"
+		description="COM_QAZAP_DOWNLOAD_ID_DESC"
+		filter="integer"
+		required="required"
+		default="" />
+		
+	<field 
+		name="passcode"
+		type="text"
+		label="COM_QAZAP_DOWNLOAD_PASSCODE_LBL"
+		description="COM_QAZAP_DOWNLOAD_PASSCODE_DESC"
+		filter="alnum"
+		required="required"
+		default="" />
+		
+</form>

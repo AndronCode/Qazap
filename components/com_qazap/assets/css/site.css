@@ -1,0 +1,1183 @@
+/**
+ * site.css
+ *
+ * LICENSE: Qazap is a free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is 
+ * derivative of works licensed under the GNU General Public License or other free
+ * or open source software licenses.
+ *
+ * @package    Qazap
+ * @subpackage Site
+ * @author     Abhishek Das <abhishek@virtueplanet.com>
+ * @copyright  Copyright (C) 2014. VirtuePlanet Services LLP. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @version    SVN: $Id$
+ * @link       http://www.qazap.com/download
+ * @since      File available since Release 1.0.0
+ */
+.qazap-product-sorter {
+	position: relative;
+	margin-left: 5px;
+	display: inline-block;
+}
+.qazap-hidden-items {
+	display: none;
+}
+.pull-left {
+	float: left;
+}
+.toupper {
+	text-transform: uppercase;
+}
+.qazap-sorter-options { 
+	position: absolute;
+	list-style: none;
+	list-style-type: none;
+	background: #FFF;
+	padding: 10px;
+	display: none;
+	margin: 0;
+	top: 27px;
+	left: 0;
+	border: 1px solid #E1E1E1;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.05);
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.05);
+	z-index: 1;
+}
+.qazap-sorter-options li {
+	white-space: nowrap;
+}
+.active-sorter {
+	display: inline-block;
+	position: relative;
+	background: url(../images/arrow-drop.png) no-repeat 100% 12px #FBFBFB;
+	box-shadow: inset 0 0 10px #ECECEC;
+	-webkit-box-shadow: inset 0 0 10px #ECECEC;
+	-moz-box-shadow: inset 0 0 10px #ececec;
+	border: 1px solid #E6E6E6;
+	padding: 0 25px 0 10px;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s linear ease-in-out;
+	-o-transition: background 0.3s linear ease-in-out;
+	transition: background 0.3s linear ease-in-out;	
+	height: 28px;
+	line-height: 28px;
+	z-index: 2;		
+}
+.over .active-sorter {
+	background-color: #FFF;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	border-bottom: 0 none;
+	margin-bottom: 1px;
+}
+.table th.left, .table td.left {
+	text-align: left;
+}
+.table th.right, .table td.right {
+	text-align: right;
+}
+.table th.center, .table td.center {
+	text-align: center;
+}
+.user-address {
+	border: 1px solid #DDD;
+}
+.user-address > .address-title {
+	background: #F9F9F9;
+	border: 0 none;
+	border-bottom: 1px solid #DDD;
+	padding: 7px 10px;
+	font-size: 1.15em;
+	line-height: 1.2em;
+}
+.user-address > .address-title input[type="radio"] {
+	margin: 0 3px 1px 0;
+}
+.user-address > .address {
+	background: #FFF;
+	border: 0 none;
+	padding: 10px;
+}
+.user-address > .address > div {
+	padding-bottom: 1px;
+}
+/* This is the moving lens square underneath the mouse pointer. */
+.cloud-zoom-lens {
+	border: 2px solid #EEE;
+	margin:-2px;	/* Set this to minus the border thickness. */
+	background-color:#fff;	
+	cursor:move;		
+}
+/* This is for the title text. */
+.cloud-zoom-title {
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute !important;
+	background-color:#000;
+	color:#fff;
+	padding:3px;
+	width:100%;
+	text-align:center;	
+	font-weight:bold;
+	font-size:10px;
+	top:0px;
+}
+/* This is the zoom window. */
+.cloud-zoom-big {
+	border:2px solid #EEE;
+	overflow:hidden;
+	background:#FFF;
+	-webkit-box-shadow: 2px 1px 10px -1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 2px 1px 10px -1px rgba(0, 0, 0, 0.15);
+	box-shadow: 2px 1px 10px -1px rgba(0, 0, 0, 0.15);	
+	z-index: 99999 !important;
+}
+/* This is the loading message. */
+.cloud-zoom-loading {
+	color:#FFF;	
+	background:#222;
+	padding:3px;
+	border:1px solid #000;
+}
+.qazap-product-rating {
+	padding: 10px 0;
+	border-bottom: 1px solid #DDD;
+	border-top: 1px solid #DDD; 
+}
+.average-product-rating, .user-product-rating {
+	float: left;
+	margin-right: 5px;
+}
+.qazap-product-reviews-wrap {
+	border: 1px solid #DDD;
+	padding: 0 15px 5px;
+}
+.user-product-rating-wrap {
+	background: #FAFAFA;
+	padding: 5px 8px;
+	border: 1px solid #EEE;
+	margin-bottom: 10px;
+}
+.review-user-name, .review-date {
+	font-style: italic;
+}
+.user-product-comment
+{
+	padding-bottom: 10px;
+}
+.review-date {
+	margin-bottom: 15px;
+	font-size: 0.9em;
+}
+.qazap-comment-box {
+	width: 98%;
+}
+.product-review-login-notice, .product-user-review-submitted {
+	font-style: italic;
+	padding-bottom: 10px;
+}
+.qazap-sales-price-wrap {
+	cursor: pointer;
+}
+.qazap-product-prices {
+	position: relative;
+	padding: 15px 0;
+	border-bottom: 1px solid #DDD;
+}
+.qazap-product-price-breakup {
+	position: absolute;
+	width: 99%;
+	padding: 0;
+	background: #FAFAFA;
+	border: 1px solid #DDD;
+	margin-top: 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	display: none;
+	z-index: 1;
+}
+.qazap-product-price-breakup > div {
+	padding: 15px;
+}
+.qazap-product-price-breakup:after, .qazap-product-price-breakup:before {
+	bottom: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.qazap-product-price-breakup:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #FAFAFA;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.qazap-product-price-breakup:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-bottom-color: #DDD;
+	border-width: 16px;
+	margin-left: -16px;
+}
+.qazap-sales-price-wrap {
+	font-size: 250%;
+	line-height: 36px;
+}
+span.final-price {
+	color: #ff8119;	
+	font-weight: normal;	
+}
+span.price-before-discount {
+	color: #999;
+	text-decoration: line-through;
+}
+.qazap-sales-price-wrap span.price-before-discount {
+	font-size: 20px;
+	line-height: 22px;
+	display: block;
+}
+.qazap-product-availability-sku {
+	padding: 10px 0 0;
+	color: #777;
+}
+.product-stock-status {
+	margin: 2px 0 10px;
+}
+.quick-overview {
+	font-weight: normal;
+	font-size: 100%;
+	font-family: inherit;
+	margin-top: 0;
+	margin-bottom: 5px;
+	line-height: 18px;
+	color: #777;
+}
+.qazap-product-overview {
+	padding: 15px 0;
+	border-top: 1px solid #DDD;
+	color: #777;
+}
+.qazap-addtocart-wrap {
+	padding: 15px 0;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+.qazap-addtocart-wrap > form {
+	margin: 0;
+}
+.qazap-addtocart-container {
+	padding: 15px 0 0 0;
+}
+input[type="text"].qazap-qty-inputbox {
+	float: left;
+	width: 25px;
+	text-align: center;
+	padding: 13px 6px;
+	font-size: 1.2em;	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;		
+}
+.qazap-qty-button-wrap {
+	float: left;
+	margin: 0 8px;
+}
+.qazap-qty-control-button, .qazap-qty-control-button:visited, .qazap-qty-control-button:focus {
+	display: block;
+	width: 25px;
+	height: 23px;
+	padding: 2px 0;
+	background-color: #3E3E3E;
+	color: #FFF;
+	border: medium none;
+	outline: 0 none;
+	font-size: 10px;
+	line-height: 22px;
+}
+.qazap-qty-control-button.plus {
+	border-bottom: 1px solid #555;
+}
+.qazap-qty-control-button:hover {
+	outline: 0 none;
+	background: #FF8119;
+}
+.qazap-add-to-cart-button, .qazap-notify-button {
+	display: inline-block;
+	position: relative;
+	line-height: 18px;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 14px 19px;
+	border: 0 none;
+	border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-ms-border-radius: 3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px;
+	background: #FF8119;
+	color: #FFF;
+	overflow: visible;
+	outline: 0 none;
+	text-decoration: none;
+}
+.qazap-add-to-cart-button:focus, .qazap-add-to-cart-button:visted, .qazap-notify-button:focus, .qazap-notify-button:visited {
+	outline: 0 none;
+	border: 0 none;
+	text-decoration: none;
+}
+.qazap-add-to-cart-button span, .qazap-notify-button span {
+	height: auto;
+	border: 0 none;
+	color: #FFF;
+	font-size: 16.25px;
+	padding: 0;
+	width: auto;
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	white-space: nowrap;
+	border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-ms-border-radius: 3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px;
+}
+.qazap-add-to-cart-button span span::after, .qazap-notify-button span span::after {
+	border-bottom: 23px solid rgba(0, 0, 0, 0);
+	border-left: 23px solid #FF8119;
+	border-top: 23px solid rgba(0, 0, 0, 0);
+	content: "";
+	position: absolute;
+	right: -23px;
+	top: 0;
+	bottom: 0;
+}
+.qazap-add-to-cart-button span span::before, .qazap-notify-button span span::before {
+	border-right: 4px solid #191919;
+	border-bottom: 0px solid rgba(0, 0, 0, 0);
+	bottom: -4px;
+	content: "";
+	position: absolute;
+	left: 0;
+}
+.qazap-add-to-cart-button:hover, .qazap-notify-button:hover {
+	background: #E1E1E1;
+	text-decoration: none;
+}
+.qazap-add-to-cart-button:hover span span::after, .qazap-notify-button:hover span span::after {
+	border-left-color: #E1E1E1;
+}
+.qazap-notify-button {
+	background: #009cae;
+}
+.qazap-notify-button span span::after {
+	border-left-color: #009cae;
+}
+.qazap-addtocart-form select {
+	width: 100%;
+}
+.qazap-ajax-popup-wrap {
+	padding: 15px 20px;
+}
+.qazap-ajax-message {
+	padding-bottom: 30px;
+}
+/**
+ * site.css
+ *
+ * LICENSE: Qazap is a free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is 
+ * derivative of works licensed under the GNU General Public License or other free
+ * or open source software licenses.
+ *
+ * @package    Qazap
+ * @subpackage Site
+ * @author     Abhishek Das <abhishek@virtueplanet.com>
+ * @copyright  Copyright (C) 2014. VirtuePlanet Services LLP. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @version    SVN: $Id$
+ * @link       http://www.qazap.com/download
+ * @since      File available since Release 1.0.0
+ */
+.qazap-popup {
+	padding: 0;
+}
+.qazap-popup form {
+	margin: 0;
+	padding: 0;
+}
+.qazap-popup-title {
+	padding: 10px 20px;
+	border-bottom: 1px solid #DDD;
+}
+.qazap-popup-title.large {
+	padding: 15px 20px;
+}
+.qazap-popup-title h3 {
+	margin: 0;
+	padding: 0;
+}
+.qazap-popup-content {
+	padding: 20px;
+}
+.qazap-popup-footer {
+	padding: 10px 20px;
+	border-top: 1px solid #DDD;
+	background: #FAFAFA;
+	text-align: right;
+	-webkit-box-shadow: inset 0 1px 0 #ffffff;
+	-moz-box-shadow: inset 0 1px 0 #ffffff;
+	box-shadow: inset 0 1px 0 #ffffff;	
+}
+.qazap-popup.ajax-add-to-cart-box {
+	min-width: 350px;
+}
+.qazap-select-attr-popup {
+	min-width: 420px;
+}
+.qazap-additional-options {
+	padding-top: 15px;
+}
+.qazap-addtowishlist-form, .qazap-addtocompare-form {
+	display: inline;
+	margin: 0;
+}
+.qazap-product-tags {
+	padding: 15px 0;
+}
+.front-page-titles {
+	margin: 10px 0 25px;
+}
+/* Category List */
+.category-list-item-inner, .brand-list-item-inner, .shop-list-item-inner {
+	text-align: center;
+	padding: 12px 8px;
+	background: #FFF;
+	border: 1px solid #DDD;
+	-webkit-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	-moz-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	margin-bottom: 20px;
+}
+.category-list-item-title, .category-list-item-title a, .brand-list-item-title, .brand-list-item-title a, .shop-list-item-title, .shop-list-item-title a, .shop-title, .shop-title a {
+	text-align: center;
+	margin: 10px 0 5px;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: Verdana;
+	line-height: 16px;
+	padding: 0;	
+}
+.shop-title, .shop-title a {
+	text-align: left;
+}
+/* Product List */
+.qazap-product-list {
+	padding-top: 30px;
+}
+.qazap-product-list-item-inner, .seller-top {
+	text-align: center;
+	padding: 0;
+	background: #FFF;
+	border: 1px solid #DDD;
+	-webkit-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	-moz-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	margin-bottom: 20px;
+}
+.qazap-product-list-item-image {
+	padding: 12px 8px 0;
+}
+.qazap-product-list-item-bottom {
+	background: #FAFAFA;
+	border-top: 1px solid #EEE;
+	padding: 8px;
+}
+.qazap-product-list-item-title {
+	font-size: 1.05em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 0;
+	color: #333;
+}
+.qazap-product-list-item-title a, .qazap-product-list-item-title a:hover, .qazap-product-list-item-title a:active, .qazap-product-list-item-title a:visited, .qazap-product-list-item-title a:focus {
+	color: #333;
+	padding-bottom: 5px;
+	border: 0 none;
+	outline: 0 none;
+	text-decoration: none;
+}
+.qazap-product-list-item-price {
+	padding: 10px 0;
+}
+.qazap-product-list-item-rating-wrap {
+	padding: 5px 0 0;
+}
+.list-item-vendor-title {
+	font-size: 0.9em;
+	font-style: italic;
+	color: #999;
+}
+.qazap-product-list-extra-options {
+	padding: 15px 0 0;
+}
+.qazap-product-list-extra-options .qazap-addtowishlist-form, .qazap-product-list-extra-options .qazap-addtocompare-form {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.qazap-product-list-extra-options .qazap-addtocart-container {
+	padding: 0;	
+	text-align: left;
+}
+.addtocompare-button.btn-link, .addtowishlist-button.btn-link {
+	padding: 0;
+	font-size: 0.85em;
+	display: block;
+	width: 100%;
+	outline: 0 none;
+	border: 0 none;
+	color: #333;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;	
+}
+.addtocompare-button.btn-link:focus, .addtocompare-button.btn-link:visited, .addtocompare-button.btn-link:hover, .addtowishlist-button.btn-link:focus, .addtowishlist-button.btn-link:visited, .addtowishlist-button.btn-link:hover {
+	outline: 0 none;
+	border: 0 none;
+	padding: 0;
+	text-decoration: none;
+}
+.qazap-product-list-extra-options .addtowishlist-button.btn-link {
+	border-right: 1px solid #EEE;
+}
+.shipping-method-logo, .payment-method-logo {
+	max-width: 100px;
+	max-height: 60px;
+}
+.qazap-edit-sp-wrap {
+	padding: 5px 0 0;
+}
+.qazap-qty-update, .qazap-product-remove {
+	display: inline;
+}
+.qazap-qty-update .btn, .qazap-product-remove .btn {
+	padding: 4px 7px;
+}
+.qazap-qty-update input[type="text"] {
+	width: 30px;
+}
+.table.table-striped tbody >  tr.qazap-vendor-total > td {
+	font-size: 1.2em;
+	padding: 15px 8px;
+	background-color: #e9e9e9;
+	border-top: 1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;	
+	color: #000;
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+}
+.table.table-striped tbody > tr.vendor-information > td {
+	font-size: 0.9em;
+	background-color: #fff8f2;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.qazap-custom-note-title {
+	padding-bottom: 7px;
+}
+.order-confirm-button-wrap {
+	text-align: right;
+}
+.qazap-popup-close.inline {	
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;	
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .2;
+	filter: alpha(opacity=20);	
+}
+.qazap-popup-close.inline:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);		
+}
+.qazap-popup-close.inline, .qazap-popup-close.inline:focus, .qazap-popup-close.inline:hover, .qazap-popup-close.inline:visited {
+	border: 0 none;
+	outline: 0 none;
+	-webkit-appearance: none;
+	background: 0 none;
+	padding: 0;
+	margin: 0;
+}
+.qazap-popup-content.cart-tos {
+	max-width: 550px;
+	min-width: 400px;
+	max-height: 500px;
+	overflow-y: auto;
+}
+.form-horizontal.no-label .control-label {
+	padding-top: 0;
+}
+td.no-wrap {
+	white-space: nowrap;
+}
+.controls .btn-group.btn-group-yesno > .btn {
+	min-width: 84px;
+	padding: 2px 12px;
+}
+.margin-bottom-15 {
+	margin-bottom: 15px;
+}
+.table tr.deleted td {
+	color: #999;
+	text-decoration: none;	
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38gYGAEESAAEGAAasgJOgzOKCoAAAAASUVORK5CYII=);
+}
+.table tr.deleted td a {
+	color: #999;
+	text-decoration: none;
+}
+.table tr.deleted td input[type="text"] {
+	opacity: 0.5;
+}
+.cart-empty-title {
+	color: #555;
+	font-size: 18px;
+	margin: 0;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+.cart-empty-msg-1, .cart-empty-msg-2 {
+	margin: 0;
+	padding-bottom: 4px;
+}
+.start-shopping  {
+	margin-top: 10px;
+}
+.start-shopping a {
+	font-size: 18px;
+	text-decoration: none;	
+}
+.align-right {
+	text-align: right;
+}
+.label-align-left .form-horizontal .control-label {
+	text-align: left;
+}
+
+/* Menu CSS */
+.horizontal-menu {
+	display: block;
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.horizontal-menu:before, .horizontal-menu:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.horizontal-menu:after {
+	clear: both;
+}
+.horizontal-menu > li {
+	display: block;
+	float: left;
+	position: static;
+}
+.qzmenu-group {
+	display: block;
+	position: relative;
+	margin-bottom: 50px;
+}
+.qzmenu-group {
+	background: #444444;
+}
+.qzmenu-group .parent a, .qzmenu-group .parent a:visited, .qzmenu-group .parent li > span {
+	padding: 10px 20px;
+	display: block;
+	color: #bdbdbd;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	text-decoration: none;
+	border: 0 none;
+	outline: 0 none;
+	background: 0 none;
+}
+.qzmenu-group .parent > a {
+	font-weight: bold;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;		
+}
+.qzmenu-group .parent:hover > a, .qzmenu-group .parent:focus > a, .qzmenu-group .parent.active > a, .qzmenu-group .parent > a:active, .qzmenu-group .parent:hover > span, .qzmenu-group .parent:focus > span, .qzmenu-group .parent.active > span {
+	color: #FFF;
+	text-decoration: none;
+	border: 0 none;
+	outline: 0 none;
+	background: #777;	
+}
+.qzmenu-group .parent.active > a:hover, .qzmenu-group .parent.active > a:focus, .qzmenu-group .parent.active > a, .qzmenu-group .parent.active > a:active {
+	color: #FFF;
+	text-decoration: none;
+	border: 0 none;
+	outline: 0 none;
+	background: #08c;	
+}
+.qzmenu-items-ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 38px;
+	background: #08c;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;		
+}
+.qzmenu-group .parent:hover .qzmenu-items-ul, .qzmenu-group .parent:focus .qzmenu-items-ul {
+	background: #777;	
+}
+.qzmenu-group .parent.active:hover .qzmenu-items-ul, .qzmenu-group .parent.active:focus .qzmenu-items-ul {
+	background: #08c;
+}
+.parent.active .qzmenu-items-ul, .parent:hover .qzmenu-items-ul, .parent:focus .qzmenu-items-ul, .parent:active .qzmenu-items-ul {
+	display: block;
+}
+.qzmenu-group .qzmenu-items-ul li > a, .qzmenu-group .qzmenu-items-ul li > a:visited, .qzmenu-group .qzmenu-items-ul li > span {
+	color: #dbdbdb;
+	text-decoration: none;
+	border: 0 none;
+	outline: 0 none;	
+}
+.qzmenu-group .qzmenu-items-ul li.active > a, .qzmenu-group .qzmenu-items-ul li.active > a:visited, .qzmenu-group .qzmenu-items-ul li.active > span {
+	color: #FFF;
+	text-decoration: none;
+	border: 0 none;
+	outline: 0 none;	
+}
+.cart-continue-area {
+	padding: 25px 0 10px;
+}
+span.star {
+  color: #9D261D;
+  font-weight: bold;
+}
+.form-horizontal.form-small .control-label {
+	width: 145px;
+	text-align: left;
+	font-size: 12px;
+}
+.form-horizontal.form-small .controls {
+	margin-left: 155px;
+}
+.form-horizontal.form-small input, .form-horizontal.form-small textarea, .form-horizontal.form-small .uneditable-input {
+	width: 150px;
+}
+.checkout-userbox .inner {
+	border: 1px solid #DDD;
+	padding: 0;
+	margin: 0;
+	background: #FFF;
+}
+.checkout-userbox h3 {
+	background: #FAFAFA;
+	border-bottom: 1px solid #DDD;
+	margin: 0;
+	padding: 8px 15px;
+}
+.checkout-userbox-contents {
+	padding: 0px 15px 20px 15px;
+	margin: 0;
+}
+.form-horizontal.form-small input.input-small {
+	width: 110px;
+}
+.form-horizontal.form-small input[type="file"], .form-horizontal.form-small input[type="image"], .form-horizontal.form-small input[type="submit"], .form-horizontal.form-small input[type="reset"], .form-horizontal.form-small input[type="button"], .form-horizontal.form-small input[type="radio"], .form-horizontal.form-small input[type="checkbox"] {
+	width: auto;
+}
+.form-horizontal.form-small .control-group {
+	margin-bottom: 10px;
+}
+.brand-description {
+	margin: 15px 0 15px;
+}
+.shop-list-item-details {
+	text-align: left;
+}
+.shop-list-item-title {
+	text-align: left;
+}
+.shop-list-item-title a, .shop-list-item-title a:hover, .shop-list-item-title a:active, .shop-list-item-title a:visited, .shop-list-item-title a:focus, .shop-title a, .shop-title a:hover, .shop-title a:active, .shop-title a:visited, .shop-title a:focus {
+	color: #333;
+	padding-bottom: 5px;
+	border: 0 none;
+	outline: 0 none;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+}
+.seller-top h2 {
+	margin-top: 0;
+}
+.seller-top {
+	padding: 25px 15px;
+}
+.seller-top .show-products {
+	margin-top: 10px;
+}
+.seller-image-cont {
+	text-align: center;
+	background: #FFF;
+}
+.qz-page-header {
+	margin-bottom: 20px;
+}
+.qz-page-header .pull-left, .qz-page-header .pull-right {
+	margin-top: 0;
+}
+.no-products-container {
+	text-align: center;
+}
+.no-products-container .message {
+	background: url(../images/stop-icon.png) no-repeat 50% -20px rgba(0, 0, 0, 0);
+	padding-top: 168px;
+}
+.text-disabled {
+	cursor: not-allowed;
+}
+.add-new-box .address {
+	display: block;
+	position: relative;
+	text-align: center;
+	background: #FAFAFA;	
+}
+.address-container {
+	margin-bottom: 15px;
+}
+.address-container:hover, .address-container:focus {
+	-webkit-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	-moz-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	box-shadow: 0px 0px 10px rgba(50,50,50,0.20);	
+}
+.add-new-box .address {
+	overflow: hidden;
+}
+.add-new-box .address > a {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 50%;
+	color: #555;
+	font-weight: bold;
+	height: 100%;
+	text-decoration: none;
+}
+.media,
+.media-body {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+.media, .media .media {
+  margin-top: 15px;
+}
+.media:first-child {
+  margin-top: 0;
+}
+.media-object {
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
+}
+.media-heading {
+  margin: 0 0 5px;
+}
+.media > .pull-left {
+  margin-right: 10px;
+}
+.media > .pull-right {
+  margin-left: 10px;
+}
+.media-list {
+  margin-left: 0;
+  list-style: none;
+}
+.category-tree {
+	position: relative;
+	overflow: hidden;
+}
+.category-tree-body {
+	position: absolute;
+	width: 100%;
+	top: -200px;
+	left: 0;
+	right: 0;
+	height: 100%;
+	text-align: left;
+	margin: 0;
+	z-index: 2;
+	background: #FFF;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;		
+}
+.category-tree:hover .category-tree-body, .category-tree:focus .category-tree-body, .category-tree-body:hover, .category-tree-body:focus {
+	opacity: 1;
+	top: 0;
+	visibility: visible;
+}
+.category-tree-body > .inner {
+	padding: 15px;
+}
+.category-tree-parent-title, .category-tree-subcat-title {
+	font: inherit;
+	font-weight: normal;
+	margin-top: 0;
+	font-size: 24px;
+}
+.category-tree-parent-title {
+	margin-top: 5px;
+}
+.category-tree-subcat-title {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.contact-link-cont {
+	padding-top: 10px;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+.width50 {
+	float: left;
+	width: 50%;
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+}
+.btn.btn-icon {
+	font-size: 16px;
+	line-height: 1;
+	padding: 5px 8px;
+}
+h1.product-name {
+	margin-bottom: 5px;
+}
+.qazap-product-name {
+	margin-bottom: 7px;
+}
+.btn-direction {
+	vertical-align: top;
+	background-color: #FBFBFB;
+	width: 27px;
+	height: 27px;
+	display: inline-block;
+	box-shadow: inset 0 0 10px #ECECEC;
+	-webkit-box-shadow: inset 0 0 10px #ECECEC;
+	-moz-box-shadow: inset 0 0 10px #ececec;
+	border: 1px solid #E6E6E6;
+	text-align: center;
+	color: inherit;	
+	line-height: 25px;
+	text-decoration: none;
+}
+.btn-direction:hover, .btn-direction:focus {
+	text-decoration: none;
+	background-color: #FFF;
+}
+.table .blank-row td {
+	background: 0 none !important;
+	height: 30px;
+}
+.comparison-table {
+	width: 100%;
+	margin-bottom: 18px;	
+}
+.comparison-table tr td {
+	border-top: 1px solid #DDD;
+	border-left: 1px solid #DDD;
+	padding: 10px;
+	vertical-align: top;
+}
+.comparison-table tr td:last-child {
+	border-right: 1px solid #DDD;
+}
+.comparison-table tr:last-child td {
+	border-bottom: 1px solid #DDD;
+}
+.comparison-table tr.addtocart-row td {
+	border-top: 0 none;
+	padding-top: 0;
+	padding-bottom: 15px;
+}
+.comparison-table tr.product_id-row td {
+	position: relative;
+	background: 0 none;
+	border-top: 0 none;
+	padding: 0;
+}
+.product_id-row .btn-remove {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	padding: 4px 5px;
+	line-height: 1;	
+}
+.comparison-table .qazap-product-list-item-price {
+	padding: 0;
+}
+.comparison-table tr td.head {
+	padding-left: 15px;
+	background: #f4f4f4;
+}
+.comparison-table .qazap-addtocart-container, .comparison-table form {
+	margin: 0;
+	padding: 0;
+}
+.child-products-wrap {
+	padding: 15px 0 0;
+}
+.child-product h4 {
+	margin: 0 0 10px;
+	padding: 0;
+	font: inherit;
+	font-size: 16px;
+	line-height: 1;
+}
+.child-product > .inner {
+	border-bottom: 1px dotted #DDD;
+	margin-bottom: 20px;
+}
+.child-product .child-image-rating, .child-product .child-details {
+	float: left;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.child-product .child-image-rating {
+	width: 30%;
+}
+.child-product .child-details {
+	width: 70%;
+}
+.child-actions .qazap-addtocart-form-list {
+	display: inline-block;
+}
+.child-details > .inner {
+	padding: 10px 15px;
+}
+.btn-group.pull-right + .btn-group.pull-right {
+	margin-left: 0;
+	margin-right: 5px;
+}
+.alert-top-margin {
+	margin-top: 15px;
+}
+figure.qazap-product-images, .parent-cat-image {
+	margin: 0;
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+.qazap-product-images .qazap-image-wrap {
+	text-align: center;
+}
+.cloud-zoom-wrap {
+	display: inline-block;
+}
+ul.image-thumbnails {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 15px 0;
+	*zoom: 1;
+}
+ul.image-thumbnails:before,
+ul.image-thumbnails:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+ul.image-thumbnails:after {
+  clear: both;
+}
+ul.image-thumbnails > li {
+	display: block;
+	float: left;
+	padding: 0 5px 10px;
+}
+.product-list-filters, .product-list-search {
+	margin: 0 0 20px;
+	padding: 10px;
+	background: #FAFAFA;
+	border: 1px solid #DDD;
+}
+.category-page .category-title {
+	margin: 0 0 10px;
+}
+.payment-redirect-form {
+	text-align: center;
+}
+.alert-empty {
+	margin: 20px 0;
+}
+.order-details-info {
+	margin-bottom: 15px;
+}
+.order-details-info > p {
+	margin-bottom: 5px;
+}
+tr.qazap-grand-total td {
+	text-align: right;
+	font-size: 16px;
+	padding: 15px 8px;
+	border-top: 1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;
+	font-weight: bold;
+	background-color: #EEE;	
+}
+tr.qazap-payment-recived td, tr.qazap-payment-refund td, tr.qazap-payment-balance td {
+	padding: 15px 8px;
+	font-size: 16px;
+	text-align: right;
+}
+.parent-category-info {
+	padding: 0 0 20px;
+	border-bottom: 1px solid #DDD;
+	margin-bottom: 20px;
+}

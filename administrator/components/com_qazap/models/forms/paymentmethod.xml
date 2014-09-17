@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field 
+		name="id" 
+		type="text" 
+		default="0" 
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_ID"
+		description="JGLOBAL_FIELD_ID_DESC"
+		readonly="true" 
+		class="readonly"/> 
+	
+	<field 
+		name="payment_name" 
+		type="text"
+		class="input-xxlarge input-large-text"
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_PAYMENT_NAME"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_PAYMENT_NAME"
+		required="true" 
+		size="40" />
+	
+	<field 
+		name="payment_description"
+		type="editor" 
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_PAYMENT_DESCRIPTION"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_PAYMENT_DESCRIPTION"
+		buttons="false"
+		filter="JComponentHelper::filterText" />
+
+	<field 
+		name="logo" 
+		type="media" 
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_LOGO"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_LOGO" 
+		filter="raw" />
+	
+	<field 
+		name="payment_method" 
+		type="qazappaymentparams"
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_PAYMENT_METHOD"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_PAYMENT_METHOD" 
+		multiple="false"
+		required="required" /> 
+			
+	<field 
+		name="countries" 
+		type="qazapcountries"
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_SHIPMENT_COUNTRY"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_SHIPMENT_COUNTRY" 
+		multiple="true" />
+		
+	<field 
+		name="price" 
+		type="text"
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_PRICE"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_PRICE" />
+
+	<field 
+		name="tax" 
+		type="text"
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_TAX"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_TAX" 
+		multiple="true" />
+		
+	<field 
+		name="tax_calculation" 
+		type="radio"
+		class="btn-group btn-group-yesno"
+		default="p" 
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_TAX_CALCULATION"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_TAX_CALCULATION" >
+		<option value="p">QAZAP_FORM_PERCENTAGE</option>
+		<option value="v">QAZAP_FORM_VALUE</option>
+	</field>
+
+	<field 
+		name="user_group" 
+		type="qazapgroup" 
+		multiple="multiple"
+		default="1"
+		label="COM_QAZAP_FORM_LBL_PAYMENTMETHOD_SHOPPER_GROUP"
+		description="COM_QAZAP_FORM_DESC_PAYMENTMETHOD_SHOPPER_GROUP" />
+			
+	<field 
+		name="created_by"
+		type="user"	
+		label="JGLOBAL_CREATED_BY_LABEL"
+		description="JGLOBAL_CREATED_BY_DESC" />
+
+	<field
+		name="created_time"
+		type="text"
+		label="JGLOBAL_CREATED_DATE"
+		class="readonly"
+		filter="unset"
+		readonly="true"/>
+
+	<field
+		name="modified_time"
+		type="text"
+		label="JGLOBAL_FIELD_MODIFIED_LABEL"
+		class="readonly"
+		filter="unset"
+		readonly="true"/>
+
+	<field
+		name="modified_by"
+		type="user"
+		label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+		class="readonly"
+		readonly="true"
+		filter="unset"/>
+
+	<field
+		name="checked_out"
+		type="hidden"
+		filter="unset"/>
+
+	<field
+		name="checked_out_time"
+		type="hidden"
+		filter="unset"/> 
+
+	<field
+		name="state"
+		type="list"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"
+		class="chzn-color-state"
+		size="1"
+		default="1">
+		<option value="1">JPUBLISHED</option>
+		<option value="0">JUNPUBLISHED</option>
+	</field>	
+
+</form>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QAZAP_PRODUCT_VIEW_DEFAULT_TITLE" option="COM_QAZAP_PRODUCT_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_QAZAP_PRODUCT_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset 
+			name="request"
+			addfieldpath="/administrator/components/com_qazap/models/fields">
+
+			<field name="product_id" 
+				type="modal_product"
+				label="COM_QAZAP_FIELD_SELECT_PRODUCT_LABEL"
+				required="true"
+				edit="true"
+				clear="false"
+				categoryelement="category_id"
+				description="COM_QAZAP_FIELD_SELECT_PRODUCT_DESC" />
+				
+			<field 
+				name="category_id" 
+				type="hidden"
+				edit="true"
+				clear="false" />				
+				
+		</fieldset>
+	</fields>
+
+		<fields name="params">
+			<fieldset name="basic"
+				label="COM_QAZAP_MENU_FIELDSET_PARAMS">
+				
+				<field
+					name="product_layout" 
+					type="componentlayout"
+					label="JGLOBAL_FIELD_LAYOUT_LABEL"
+					description="JGLOBAL_FIELD_LAYOUT_DESC"
+					menuitems="true"
+					useglobal="true"
+					extension="com_qazap"
+					view="product" />
+
+				<field 
+					name="show_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_SHOW_ICON"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+											
+				<field 
+					name="print_view_link" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_PRINT_VIEW_LINK"
+					description="COM_QAZAP_CONFIG_DESC_PRINT_VIEW_LINK" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field 
+					name="pdf_view_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_PDF_VIEW_ICON"
+					description="COM_QAZAP_CONFIG_DESC_PDF_VIEW_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="email_icon" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_CONFIG_LBL_EMAIL_ICON"
+					description="COM_QAZAP_CONFIG_DESC_EMAIL_ICON" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_availablity" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="availability_day_info" 
+					type="list"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_AVAILABLITY_DAY_INFO"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_AVAILABLITY_DAY_INFO" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="in_stock_image" 
+					type="media"
+					directory="qazap"
+					default=""    
+					label="COM_QAZAP_LBL_IN_STOCK_IMAGE"
+					description="COM_QAZAP_DESC_IN_STOCK_IMAGE" >
+				</field>
+				
+				<field 
+					name="out_of_stock_image" 
+					type="media"
+					directory="qazap"
+					default=""    
+					label="COM_QAZAP_LBL_OUT_OF_STOCK_IMAGE"
+					description="COM_QAZAP_DESC_OUT_OF_STOCK_IMAGE" >
+				</field>
+				
+				<field 
+					name="show_stock" 
+					type="list"
+					class="btn-group btn-group-yesno"
+					default=""    
+					label="COM_QAZAP_LBL_SHOW_PRODUCT_STOCK"
+					description="COM_QAZAP_DESC_SHOW_PRODUCT_STOCK" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>				
+				
+				<field 
+					name="show_manufacturer" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_MANUFACTURER"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_MANUFACTURER" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_category_product" 
+					type="list"   
+					label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field 
+					name="show_link_category_product" 
+					type="list" 
+					label="COM_QAZAP_CONFIG_LBL_SHOW_CATEGORY_LINK"
+					description="COM_QAZAP_CONFIG_DESC_SHOW_CATEGORY_LINK" 
+					default="">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+		</fields>		
+		
+</metadata>

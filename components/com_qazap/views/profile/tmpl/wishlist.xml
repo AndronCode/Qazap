@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QAZAP_PROFILE_VIEW_WISHLIST_TITLE" option="COM_QAZAP_PROFILE_VIEW_WISHLIST_OPTION">
+		<message>
+			<![CDATA[COM_QAZAP_PROFILE_VIEW_WISHLIST_DESC]]>
+		</message>
+	</layout>
+					
+</metadata>

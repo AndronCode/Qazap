@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_QAZAP_ITEMS_SEARCH_FILTER"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="orderstates"
+			type="orderstates"
+			label="COM_QAZAP_FILTER_ORDERSTATES"
+			description="COM_CQAZAP_FILTER_ODSERSTATES_DESC"
+			default="*"
+			onchange="this.form.submit();">
+			<option value='*'>JALL</option> 
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="og.ordergroup_id ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="og.ordergroup_id ASC">COM_QAZAP_ORDERS_GROUP_ID_ASCENDING</option>
+			<option value="og.ordergroup_id DESC">COM_QAZAP_ORDERS_GROUP_ID_DESCENDING</option>
+			<option value="os.status_name ASC">COM_QAZAP_STATUS_ASCENDING</option>
+			<option value="os.status_name DESC">COM_QAZAP_STATUS_DESCENDING</option>
+			<option value="oa.first_name ASC">COM_QAZAP_ORDERS_USER_NAME_ASCENDING</option>
+			<option value="oa.first_name DESC">COM_QAZAP_ORDERS_USER_NAME_DESCENDING</option>
+			<option value="og.ordergroup_number ASC">COM_QAZAP_ORDERS_GROUP_NUMBER_ASCENDING</option>
+			<option value="og.ordergroup_number DESC">COM_QAZAP_ORDERS_GROUP_NUMBER_DESCENDING</option>
+			<option value="pm.payment_name ASC">COM_QAZAP_ORDERS_PAYMENT_NAME_ASCENDING</option>
+			<option value="pm.payment_name DESC">COM_QAZAP_ORDERS_PAYMENT_NAME_DESCENDING</option>
+			<option value="og.cart_total ASC">COM_QAZAP_ORDERS_GROUP_TOTAL_ASCENDING</option>
+			<option value="og.cart_total DESC">COM_QAZAP_ORDERS_GROUP_TOTAL_DESCENDING</option>
+			
+								
+			
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CATEGORIES_LIST_LIMIT"
+			description="COM_CATEGORIES_LIST_LIMIT_DESC"
+			format="%Y-%m-%d %H:%M:%S"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

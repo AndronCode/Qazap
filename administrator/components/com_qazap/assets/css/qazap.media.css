@@ -1,0 +1,125 @@
+/**
+ * qazap.media.css
+ *
+ * LICENSE: Qazap is a free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is 
+ * derivative of works licensed under the GNU General Public License or other free
+ * or open source software licenses.
+ *
+ * @package    Qazap
+ * @subpackage Admin
+ * @author     Abhishek Das <abhishek@virtueplanet.com>
+ * @copyright  Copyright (C) 2014. VirtuePlanet Services LLP. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @version    SVN: $Id$
+ * @link       http://www.qazap.com/download
+ * @since      File available since Release 1.0.0
+ */
+.qzmedia-preview-group {
+	border: 1px solid #DDD;
+	background: #FFF;
+	float: left;
+	margin: 20px 20px 0 0;
+	display: block;
+	width: auto;
+	-webkit-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	-moz-box-shadow: 0px 0px 10px rgba(50,50,50,0.20);
+	box-shadow: 0px 0px 10px rgba(50,50,50,0.20);	
+	cursor: move;
+}
+.qzmedia-preview-group.editing {
+	width: 100%;
+}
+.qzmedia-preview-img-cont {
+	text-align: center;
+	padding: 15px;
+	padding-bottom: 30px;
+	margin-bottom: 15px;
+	position: relative;
+}
+.qzmedia-preview-img-control {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+}
+.qzmedia-preview-img-inner {
+	position: relative;
+	width: 200px;
+	height: 180px;	
+}
+.qzmedia-preview-img-bottom {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -12px;
+	width: 100%;
+	display: none;
+	text-align: center;
+	-moz-transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+	-o-transition: all .5s linear;
+	transition: all .5s linear;
+	opacity: 0;
+}
+.qzmedia-preview-img-inner:hover > .qzmedia-preview-img-bottom {
+	display: block;
+	opacity: 1;
+}
+.qzmedia-preview-img-inner > .img-container {
+	display: inline-block;
+	padding: 5px;
+	background: #FFF;
+	border: 1px solid #eee;
+}
+.qzmedia-preview-single-details {
+	display: none;
+	float: left;
+	width: 80%;
+	opacity: 0;
+	padding: 30px 0 0;
+}
+.editing .qzmedia-preview-single-details {
+	display: block;
+	opacity: 1;
+}
+.qzmedia-preview-single-image {
+	float: left;
+	max-width: 262px;
+}
+.editing .qzmedia-preview-single-image {
+	width: 20%;
+}
+.qzmedia-preview-img-type {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+.img-helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.qzmedia-preview-single-details .control-group {
+	margin-right:20px;
+}
+.qazapmedia-field .progress {
+	margin-top: 20px;
+}
+.qazap-media-preview {
+	display: none;
+}
+.qazap-media-preview.preview-item {
+	display: table-row;
+}
+.qazap-media-index {
+	width: 10px;
+}
+.qazap-media-name {
+	width: 40%;
+}
+.qazap-media-loader {
+	margin-left: 20px;
+	margin-top: 8px;	
+}

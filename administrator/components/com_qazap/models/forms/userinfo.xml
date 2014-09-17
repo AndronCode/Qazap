@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field 
+			name="id" 
+			type="text" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_USERINFO_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+		
+		<field 
+			name="user_id" 
+			type="user" 
+			size="40" 
+			class="inputbox"
+			label="COM_QAZAP_FORM_LBL_USERINFO_USER_ID"
+			description="COM_QAZAP_FORM_DESC_USERINFO_USER_ID" 
+			required="true"
+			filter="integer" /> 
+		
+		<field 
+			name="address_type" 
+			type="qazapaddresstype" 
+			size="40" 
+			class="inputbox" 
+			onchange="UserinfoFormsubmit('userinfo.setaddresstype')"
+			label="COM_QAZAP_FORM_LBL_USERINFO_ADDRESS_TYPE"
+			description="COM_QAZAP_FORM_DESC_USERINFO_ADDRESS_TYPE" 
+			filter="string" />	 
+		
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field 
+			name="created_by" 
+			type="user" 
+			label="JGLOBAL_CREATED_BY_LABEL"
+			description="JGLOBAL_CREATED_BY_DESC"/>
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+		
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+	</fieldset>
+</form>

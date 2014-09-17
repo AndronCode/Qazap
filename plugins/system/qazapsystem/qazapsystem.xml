@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system">
+	<name>System - Qazap System Plugin</name>
+	<author>Qazap Team</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>Copyright (C) 2014 VirtuePlanet Services LLP. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@qazap.com</authorEmail>
+	<authorUrl>http://www.qazap.com</authorUrl>
+	<version>1.0.0</version>
+	<description>System - Qazap System Plugin</description>
+	<files>
+		<filename plugin="qazapsystem">qazapsystem.php</filename>
+		<filename>index.html</filename>
+		<folder>helpers</folder>
+	</files>
+</extension>

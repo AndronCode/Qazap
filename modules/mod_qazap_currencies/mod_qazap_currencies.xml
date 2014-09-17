@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Qazap Currency Switcher</name>
+	<author>Qazap Team</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>Copyright (C) 2014 VirtuePlanet Services LLP. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@qazap.com</authorEmail>
+	<authorUrl>www.qazap.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_QAZAP_CURRENCIES_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_qazap_currencies">mod_qazap_currencies.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_qazap_currencies.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_qazap_currencies.ini</language>
+		<language tag="en-GB">languages/en-GB.mod_qazap_currencies.sys.ini</language>
+	</languages>
+	<config>
+		<fieldset>
+			<field name="language"
+				type="list"
+				description="JFIELD_MODULE_LANGUAGE_DESC"
+				label="JFIELD_LANGUAGE_LABEL">
+				<option value="*">JALL</option>
+			</field>
+		</fieldset>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="header_text"
+					type="textarea"
+					filter="safehtml"
+					rows="3"
+					cols="40"
+					label="MOD_QAZAP_CURRENCIES_FIELD_HEADER_LABEL"
+					description="MOD_QAZAP_CURRENCIES_FIELD_HEADER_DESC" />
+
+				<field
+					name="footer_text"
+					type="textarea"
+					filter="safehtml"
+					rows="3"
+					cols="40"
+					label="MOD_QAZAP_CURRENCIES_FIELD_FOOTER_LABEL"
+					description="MOD_QAZAP_CURRENCIES_FIELD_FOOTER_DESC" />
+
+				<field
+					name="show_active"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_QAZAP_CURRENCIES_FIELD_ACTIVE_LABEL"
+					description="MOD_QAZAP_CURRENCIES_FIELD_ACTIVE_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="full_name"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_QAZAP_CURRENCIES_FIELD_FULL_NAME_LABEL"
+					description="MOD_QAZAP_CURRENCIES_FIELD_FULL_NAME_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="MOD_QAZAP_CURRENCIES_FIELD_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="MOD_QAZAP_CURRENCIES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

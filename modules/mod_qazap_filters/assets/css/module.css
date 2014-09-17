@@ -1,0 +1,107 @@
+/**
+ * module.css
+ *
+ * LICENSE: Qazap is a free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or is 
+ * derivative of works licensed under the GNU General Public License or other free
+ * or open source software licenses.
+ *
+ * @package    Qazap
+ * @subpackage Qazap Filters Module
+ * @author     Abhishek Das <abhishek@virtueplanet.com>
+ * @copyright  Copyright (C) 2014. VirtuePlanet Services LLP. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @version    SVN: $Id$
+ * @link       http://www.qazap.com/download
+ * @since      File available since Release 1.0.0
+ */
+.qazap-filter-group ul {
+	list-style: none;
+	list-style-type: none;
+	margin: 0 0 9px 10px;
+}
+.qazap-filter-group label {
+	display: inline-block;
+	margin: 0 0 5px 5px;
+}
+.qazap-filter-group input[type="radio"], .qazap-filter-group input[type="checkbox"] {
+	margin: 0 10px 0 0;
+}
+.qazap-filter-group .filter-product-count {
+	padding-left: 10px;
+	color: #999;
+	font-size: 0.9em;
+	vertical-align: top;
+}
+.qazap-filter-group label.disabled {
+	cursor: default;
+	pointer-events: none;
+	color: #d6d6d6;
+}
+.qazap-filter-group .disabled .filter-product-count {
+	color: #d6d6d6;
+}
+.price-range-label {
+	padding: 8px 0;
+}
+.price-range-label:before, .price-range-label:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.price-range-label:after {
+	clear: both;
+}
+.price-range-label .min {
+	float: left;
+}
+.price-range-label .max {
+	float: right;
+}
+.qazap-clear-filter-cont {
+	text-align: right;
+	font-size: 0.9em;
+}
+#slider-cont {
+	position: relative;
+	padding-top: 45px;
+}
+#slider-cont .info {
+	position: absolute;
+	top: 10px;
+	background-color: #8cc63f;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	padding: 2px 10px;
+	white-space: nowrap;	
+}
+#slider-cont .info .arrow {
+	position: absolute;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent;
+	border-top-color: #8bc557;
+	left: 50%;
+	margin-left: -4px;
+}
+#price-range-slider .ui-widget-header {
+	background: #8cc63f;
+	background-color: #8cc63f;
+	border: 0 none;
+}
+#price-range-slider.ui-slider-horizontal {
+	height: 6px;
+	border-color: #808080;
+}
+#price-range-slider.ui-slider .ui-slider-handle {
+	height: 16px;
+	width: 10px;
+	border-radius: 6px;
+	background: #282d2c;
+	background-color: #282d2c;
+	border: 0 none;
+	outline: 0 none;
+	cursor: pointer;
+}

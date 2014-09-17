@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="id" 
+			type="hidden" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_MEMBER_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field 
+			name="user_id" 
+			type="user"
+			label="COM_QAZAP_FORM_LBL_MEMBER_USER_ID"
+			description="COM_QAZAP_FORM_DESC_MEMBER_USER_ID" 
+			required="true" 
+			filter="raw" /> 
+
+		<field 
+			name="membership_id" 
+			type="membership"
+			label="COM_QAZAP_FORM_LBL_MEMBER_MEMBERSHIP_ID"
+			description="COM_QAZAP_FORM_DESC_MEMBER_MEMBERSHIP_ID" 
+			required="true" 
+			filter="raw" /> 
+
+		<field 
+			name="from_date" 
+			type="calendar" 
+			class="inputbox" 
+			default="NOW" 
+			format="%Y-%m-%d %H:%M" 
+			filter="user_utc"        
+			label="COM_QAZAP_FORM_LBL_MEMBER_FROM_DATE"
+			description="COM_QAZAP_FORM_DESC_MEMBER_FROM_DATE"/> 
+
+		<field 
+			name="to_date" 
+			type="calendar" 
+			class="inputbox" 
+			format="%Y-%m-%d %H:%M"
+			filter="user_utc"
+			label="COM_QAZAP_FORM_LBL_MEMBER_TO_DATE"
+			description="COM_QAZAP_FORM_DESC_MEMBER_TO_DATE"/>
+      
+		<field 
+			name="status" 
+			type="hidden"
+			label="COM_QAZAP_FORM_LBL_MEMBER_MEMBERSHIP_STATUS"
+			description="COM_QAZAP_FORM_DESC_MEMBER_MEMBERSHIP_STATUS"  
+			filter="raw" />
+	
+		<field 
+			name="jusergroup_id" 
+			type="hidden"
+			label="COM_QAZAP_FORM_LBL_MEMBER_JUSERGROUP_ID"
+			description="COM_QAZAP_FORM_DESC_MEMBER_JUSERGROUP_ID"  
+			filter="raw" />
+		<field 
+			name="created_by" 
+			type="user" 
+			label="JGLOBAL_CREATED_BY_LABEL"
+			description="JGLOBAL_CREATED_BY_DESC"/>
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+				
+		<field 
+			name="effected_items" 
+			type="hidden" 
+			multiple="multiple"
+			label="COM_QAZAP_FORM_LBL_MEMBER_JUSERGROUP_ID"
+			description="COM_QAZAP_FORM_DESC_MEMBER_JUSERGROUP_ID"  
+			filter="raw" />
+		
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+
+
+	</fieldset>
+
+</form>

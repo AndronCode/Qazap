@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+			<field 
+				name="id" 
+				type="text" 
+				default="0" 
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_ID"
+				readonly="true" 
+				class="readonly"
+				description="JGLOBAL_FIELD_ID_DESC" /> 
+			
+			<field 
+				name="field_name" 
+				type="text"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_FIELD_NAME"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_FIELD_NAME" 
+				required="true" 
+				filter="raw" /> 
+			
+			<field 
+				name="max_length" 
+				type="text" 
+				required="true"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_MAX_LENGTH"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_MAX_LENGTH" 
+				filter="raw" /> 
+			
+			<field 
+				name="field_title" 
+				type="text"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_FIELD_TITLE"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_FIELD_TITLE" 
+				readonly="true"
+				filter="raw" /> 
+			
+			<field 
+				name="description" 
+				type="textarea"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_DESCRIPTION"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_DESCRIPTION" 
+				cols="100"
+				rows="8"
+				filter="raw" /> 
+			
+			<field 
+				name="field_type" 
+				type="list"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_FIELD_TYPE"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_FIELD_TYPE" 
+				required="true" 
+				filter="raw">
+				<option value="fieldset">COM_QAZAP_FIELD_TYPE_FIELDSET</option>
+				<option value="text">COM_QAZAP_FIELD_TYPE_TEXT</option>
+				<option value="checkbox">COM_QAZAP_FIELD_TYPE_CHECKBOX</option>
+				<option value="calendar">COM_QAZAP_FIELD_TYPE_DATE</option>
+				<option value="list">COM_QAZAP_FIELD_TYPE_SELECT</option>
+				<option value="list:multiple">COM_QAZAP_FIELD_TYPE_SELECT_MULTI</option>
+				<option value="email">COM_QAZAP_FIELD_TYPE_EMAIL</option>
+				<option value="editor">COM_QAZAP_FIELD_TYPE_EDITOR</option>
+				<option value="textarea">COM_QAZAP_FIELD_TYPE_TEXTAREA</option>
+				<option value="radio">COM_QAZAP_FIELD_TYPE_RADIO</option>
+				<option value="url">COM_QAZAP_FIELD_TYPE_WEBADDRESS</option>
+				<option value="qazapcountries">COM_QAZAP_FIELD_TYPE_COUNTRY</option>
+				<option value="qazapstates">COM_QAZAP_FIELD_TYPE_STATE</option>	
+				<option value="media">COM_QAZAP_FIELD_TYPE_MEDIA</option>
+			</field>
+			
+			<field 
+				name="values" 
+				type="textarea"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_VALUES"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_VALUES" 
+				cols="100"
+				rows="8"
+				filter="raw" /> 
+			
+			<field 
+				name="required" 
+				type="radio" 
+				default="0" 
+				class="btn-group"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_REQUIRED"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_REQUIRED" 
+				filter="raw">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field> 
+			
+			<field 
+				name="filter_required"
+				type="list" 
+				onchange="this.form.submit();">
+				<option value="">COM_QAZAP_VENDORFIELDS_REQUIRED_FILTER</option>
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field> 
+			
+			<field 
+				name="show_in_vendorbilling_form" 
+				type="radio" 
+				default="0" 
+				class="btn-group"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_SHOW_IN_VENDORBILLING_FORM"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_SHOW_IN_VENDORBILLING_FORM" 
+				filter="raw">
+				<option value="0">No</option>
+				<option value="1" >Yes</option>
+			</field> 
+			
+			<field 
+				name="show_in_userbilling_form" 
+				type="radio" 
+				default="1" 
+				class="btn-group"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_SHOW_IN_USERBILLING_FORM"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_SHOW_IN_USERBILLING_FORM" 
+				filter="raw">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>  
+			
+			<field 
+				name="read_only" 
+				type="radio" 
+				default="0" 
+				class="btn-group"
+				label="COM_QAZAP_FORM_LBL_VENDORFIELD_READ_ONLY"
+				description="COM_QAZAP_FORM_DESC_VENDORFIELD_READ_ONLY" 
+				filter="raw">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field> 
+			
+			<field
+				name="checked_out"
+				type="hidden"
+				filter="unset"/>
+
+			<field
+				name="checked_out_time"
+				type="hidden"
+				filter="unset"/>
+			
+			<field
+				name="state"
+				type="list"
+				label="JSTATUS"
+				description="JFIELD_PUBLISHED_DESC"
+				class="inputbox"
+				size="1"
+				default="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+			</field>
+			
+			<field 
+			name="created_by" 
+			type="user" 
+			label="JGLOBAL_CREATED_BY_LABEL"
+			description="JGLOBAL_CREATED_BY_DESC"  />
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+	</fieldset>
+</form>

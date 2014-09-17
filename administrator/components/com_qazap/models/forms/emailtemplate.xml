@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field 
+			name="id" 
+			type="text" 
+			default="0" 
+			label="COM_QAZAP_FORM_LBL_EMAIL_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" /> 
+
+		<field 
+			name="created_by" 
+			type="createdby" 
+			default="" 
+			label="COM_QAZAP_FORM_LBL_EMAIL_CREATED_BY"
+			description="COM_QAZAP_FORM_DESC_EMAIL_CREATED_BY"  /> 
+
+		<field 
+			name="name" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_EMAIL_NAME"
+			description="COM_QAZAP_FORM_DESC_EMAIL_NAME"
+			class="input-xxlarge input-large-text"
+			hint="Enter a title of the Mail" 
+			required="true"  /> 
+
+		<field 
+			name="subject" 
+			type="text"
+			label="COM_QAZAP_FORM_LBL_EMAIL_SUBJECT"
+			description="COM_QAZAP_FORM_DESC_EMAIL_SUBJECT"
+			class="input-xxlarge input-large-text"
+			hint="Enter subject of the mail" 
+			required="true"  /> 
+		
+		<field 
+			name="body" 
+			type="editor"
+			label="COM_QAZAP_FORM_LBL_EMAIL_BODY"
+			description="COM_QAZAP_FORM_DESC_EMAIL_BODY" 
+			required="true"  
+			filter="JComponentHelper::filterText" /> 
+
+		<field 
+			name="altbody" 
+			type="textarea"
+			label="COM_QAZAP_FORM_LBL_EMAIL_ALT_BODY"
+			description="COM_QAZAP_FORM_DESC_EMAIL_ALT_BODY"
+			class="span12" 
+			filter="JComponentHelper::filterText" /> 
+
+		<field 
+			name="css" 
+			type="textarea"
+			label="COM_QAZAP_FORM_LBL_EMAIL_CSS"
+			class="span12"
+			rows="8"
+			description="COM_QAZAP_FORM_DESC_EMAIL_CSS"
+			filter="raw" />
+		
+		<field 
+			name="lang" 
+			type="contentlanguage" 
+			label="JFIELD_LANGUAGE_LABEL"
+			description="COM_QAZAP_FIELD_LANGUAGE_DESC">
+			<option value="*">JALL</option>
+		</field>
+
+		<field 
+			name="default" 
+			type="radio"
+			class="btn-group btn-group-yesno" 
+			label="COM_QAZAP_FORM_LBL_EMAIL_DEFAULT"
+			description="COM_QAZAP_FORM_DESC_EMAIL_DEFAULT" 
+			default="0">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field> 
+
+		<field 
+			name="purpose" 
+			type="qazapemailtemplates"
+			label="COM_QAZAP_FORM_LBL_EMAIL_PURPOSE"
+			description="COM_QAZAP_FORM_DESC_EMAIL_PURPOSE"
+			useselect="true"
+			onchange="Qazap.showTemplateOptions();"
+			required="true" />
+
+		<field 
+			name="mode" 
+			type="radio" 
+			default="1" 
+			class="btn-group btn-group-yesno"                
+			label="COM_QAZAP_FORM_LBL_EMAIL_MODE"
+			description="COM_QAZAP_FORM_DESC_EMAIL_MODE"                
+			filter="raw">
+				<option value="1">COM_QAZAP_HTML</option>
+				<option value="0">COM_QAZAP_TEXT</option>
+		</field>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field> 
+
+		<field 
+			name="checked_out" 
+			type="hidden" 
+			filter="unset" />
+		
+		<field 
+			name="checked_out_time" 
+			type="hidden" 
+			filter="unset" />
+			
+		<field 
+			name="created_by" 
+			type="user" 
+			label="JGLOBAL_CREATED_BY_LABEL"
+			description="JGLOBAL_CREATED_BY_DESC"  />
+		
+		<field
+			name="created_time"
+			type="text"
+			label="JGLOBAL_CREATED_DATE"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_time"
+			type="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			class="readonly"
+			filter="unset"
+			readonly="true" />
+		
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			class="readonly"
+			readonly="true"
+			filter="unset"/>
+
+	</fieldset>
+
+</form>

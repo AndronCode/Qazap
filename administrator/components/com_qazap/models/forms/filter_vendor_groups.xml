@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_QAZAP_ITEMS_SEARCH_FILTER"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="state"
+			type="list"
+			label="COM_QAZAP_FILTER_PUBLISHED"
+			description="COM_CQAZAP_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="*">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">COM_QAZAP_FILTER_PUBLISHED</option>
+			<option value="0">COM_QAZAP_FILTER_UNPUBLISHED</option>
+			<option value="-2">COM_QAZAP_FILTER_TRASH</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.ordering ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.vendor_group_id ASC">COM_QAZAP_VENDOR_GROUPS_VENDOR_GROUP_ID_ASCENDING</option>
+			<option value="a.vendor_group_id DESC">COM_QAZAP_VENDOR_GROUPS_VENDOR_GROUP_ID_DESCENDING</option>
+			<option value="a.ordering ASC">COM_QAZAP_VENDOR_GROUPS_ORDERING_ASCENDING</option>
+			<option value="a.ordering DESC">COM_QAZAP_VENDOR_GROUPS_ORDERING_DESCENDING</option>
+			<option value="a.title ASC">COM_QAZAP_VENDOR_GROUPS_TITLE_ASCENDING</option>
+			<option value="a.title DESC">COM_QAZAP_VENDOR_GROUPS_TITLE_DESCENDING</option>
+			<option value="b.title ASC">COM_QAZAP_VENDOR_GROUPS_JOOMLA_USER_GROUP_ASCENDING</option>
+			<option value="b.title DESC">COM_QAZAP_VENDOR_GROUPS_JOOMLA_USER_GROUP_DESCENDING</option>
+			<option value="c.title ASC">COM_QAZAP_VENDOR_GROUPS_JOOMLA_VIEW_LEBEL_ASCENDING</option>
+			<option value="c.title DESC">COM_QAZAP_VENDOR_GROUPS_JOOMLA_VIEW_LEBEL_DESCENDING</option>
+			<option value="a.commission ASC">COM_QAZAP_VENDOR_GROUPS_COMMISSION_ASCENDING</option>
+			<option value="a.commission DESC">COM_QAZAP_VENDOR_GROUPS_COMMISSION_DESCENDING</option>
+			
+								
+			
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CATEGORIES_LIST_LIMIT"
+			description="COM_CATEGORIES_LIST_LIMIT_DESC"
+			format="%Y-%m-%d %H:%M:%S"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

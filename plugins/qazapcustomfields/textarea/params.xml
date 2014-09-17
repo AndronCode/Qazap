@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" addfieldpath="administrator/components/com_qazap/models/fields">
+		<fieldset name="params_fieldset">
+			
+				
+		</fieldset>					
+	</fields>
+</form>
