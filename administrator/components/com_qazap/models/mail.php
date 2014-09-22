@@ -22,7 +22,7 @@ jimport('joomla.application.component.modellegacy');
 
 if(!class_exists('Mustache_Autoloader'))
 {
-	require QAZAP_LIBRARIES . DS . 'mustache' . DS . 'Autoloader.php';
+	require QAZAP_LIBRARIES . DS . 'Mustache' . DS . 'Autoloader.php';
 	Mustache_Autoloader::register();
 }
 if(!class_exists('Emogrifier'))
