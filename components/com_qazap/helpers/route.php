@@ -751,9 +751,9 @@ abstract class QazapHelperRoute
 	
 	public static function getDefaultPage($needles = array())
 	{
-		static $default = null;
+		static $return = null;
 		
-		if($default === null)
+		if($return === null)
 		{
 			$app 		= JFactory::getApplication(); 
 			$menus		= $app->getMenu('site');
@@ -770,7 +770,6 @@ abstract class QazapHelperRoute
 			}
 
 			$items = $menus->getItems($attributes, $values);
-			$return = null;
 			
 			if(!empty($items))
 			{			
@@ -797,12 +796,11 @@ abstract class QazapHelperRoute
 			if(empty($return))
 			{
 				$default = $menus->getDefault($language);
-				$return = !empty($default->id) ? $default->id : null;					
-			}		
-					
+				$return = !empty($default->id) ? $default->id : 0;					
+			}					
 		}
 		
-		return $return;
+		return $return ? $return : null;
 	}
 	
 	
