@@ -1260,6 +1260,11 @@ class QZProducts
 		{
 			$query = $this->_getQuery(array($product->category_id));
 			$query->clear('select')->clear('group')->select('p.product_id, p.category_id');
+			
+			if($this->_ordering == 'cd.title' || $this->_ordering == 'pd.product_name')
+			{
+				$query = $this->_getDetailsQuery($query);
+			}			
 
 			if(strtoupper($this->_direction) == 'ASC')
 			{
@@ -1316,7 +1321,7 @@ class QZProducts
 			$query->where($order_name . $operation . $db->quote($order_value));
 			$query->order($order_name .' '.$direction);
 			$db->setQuery($query);
-			
+
 			//echo str_replace('#__', 'f8rup_', $query);exit;
 			
 			$sibling = $db->loadObject();			
