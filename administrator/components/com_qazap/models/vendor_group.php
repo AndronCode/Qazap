@@ -130,7 +130,7 @@ class QazapModelVendor_group extends JModelAdmin
 	public function save($data)
 	{	
 		$db = $this->getDbo();
-		$query = $$db->getQuery(true)
+		$query = $db->getQuery(true)
 					->select('COUNT(v.vendor_group_id)')
 					->from('#__qazap_vendor_groups AS v')
 					->where('v.title = '. $db->quote($data['title']))
